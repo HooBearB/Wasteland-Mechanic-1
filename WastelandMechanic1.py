@@ -40,11 +40,11 @@ import os
 import time
 
 def init():
-    time.sleep(1)
-    #Displays the logo of the MOOSE engine
-    moose.displayLogo()
-    time.sleep(1)
-    animations.mainMenu()
-    time.sleep(1)
+	time.sleep(1)
+  	#Displays the logo of the MOOSE engine
+	moose.displayLogo()
+	time.sleep(1)
+	animations.mainMenu()
+	moose.askOption("Main Menu", ["Start game", "Load game", "Settings"])
     
 init()

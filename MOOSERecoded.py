@@ -15,6 +15,7 @@
 
 import time
 
+#Provides ANSI colour and format information
 class format:
     mode = "Colour"
     clear = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -30,6 +31,7 @@ class format:
     yellow = "\u001b[33m"
     end = "\u001b[0m"
 
+#Prints out logo for use in intro screens and such
 def displayLogo():
     msg = """
 MADE WITH
@@ -61,6 +63,7 @@ v0.1
     print(format.end)
     print(format.clear)
 
+#Prints out all included ANSI values with respective tags
 def ansiTest():
     print(format.strikethrough + "Strikethrough" + format.end)
     print(format.italic + "Italic" + format.end)
@@ -72,41 +75,65 @@ def ansiTest():
     print(format.green + "Green" + format.end)
     print(format.yellow + "Yellow" + format.end)
 
-def scrollingText(message, indent = 2, delay = 0.02):
+#Prints out a string bit by bit, giving the impression of text that scrolls across the screen
+#   message: What to print out in the beginning (String)
+#   indent: How far from the edge of the terminal printing should begin, in spaces (Positive integer, default 2)
+#   increment: How many letters should print out in one loop (Positive integer, default 1)
+#   delay: How long to wait between loops (Positive float, default 0.02)
+def scrollingText(message, indent = 2, increment = 1, delay = 0.02):
+    #Prints out indent from edge
     run = 0
     while run < indent:
         print(" ", end = "")
         run = run + 1
+    #Prints out every letter in given message, pausing between every increment
     run = 0
     while run < len(message):
-        print(message[run : run + 1], end = "")
+        print(message[run : run + increment], end = "")
         time.sleep(delay)
-        run = run + 1
+        run = run + increment
     print("")
 
-def askOption(message, options, indent = 2, delay = 0, lookingFor = ""):
+#Asks for user input given a list of options
+#   message: What to print out in the beginning (String)
+#   options: What to print out in list form for the player to choose from (String table)
+#   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
+#   delay: How long to wait between printing list objects (Positive float, default 0)
+#   lookingFor: What line to print a special string that indicates a selected object (Positive integer, default -1 to prevent usage)
+def askOption(message, options, indent = 2, delay = 0, lookingFor = -1):
+    #Prints out indent
     run = 0
     while run < indent:
         print(" ", end = "")
         run = run + 1
+    #Prints out initial message
     print(message)
     runline = 0
     while runline < len(options):
+        #Checks if running line corresponds to the line that the program is looking for
         if runline == lookingFor:
-            print("  - ", end = "")
+            #Prints selection indicator and makes the line bold
+            print("  - " + format.bold, end = "")
         else:
+            #Prints list indent
             run = 0
             while run <= indent + 1:
                 print(" ", end = "")
                 run = run + 1
+        #Prints out list object
         print(str(runline + 1) + ". " + options[runline])
+        print(format.end, end = "")
+        #Waits between loops
         time.sleep(delay)
+        #Moves to next line in list
         runline = runline + 1
     run = 0
     while run <= indent:
         print(" ", end = "")
         run = run + 1
+    #Asks for user input
     decision = input("> ")
+    #Checks if input is a usable int
     while type(decision) != int:
         try:
             decision = int(decision)
@@ -121,6 +148,7 @@ def askOption(message, options, indent = 2, delay = 0, lookingFor = ""):
                 print(" ", end = "")
                 run = run + 1
             decision = input("> ")
+    #Checks if input is within list range
     while decision < 1 or decision > len(options):
         run = 0
         while run <= indent:
@@ -146,9 +174,48 @@ def askOption(message, options, indent = 2, delay = 0, lookingFor = ""):
                     print(" ", end = "")
                     run = run + 1
                 decision = input("> ")
+    #Returns user decision
     return decision
 
-def askOpen(message, indent = 2):
+#Prints out plain list of objects
+#   message: What to print out in the beginning (String)
+#   options: What to print out in list form for the player to choose from (String table)
+#   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
+#   delay: How long to wait between printing list objects (Positive float, default 0)
+def listOption(message, options, indent = 2, delay = 0, lookingFor = -1):
+    #Prints out indent
+    run = 0
+    while run < indent:
+        print(" ", end = "")
+        run = run + 1
+    #Prints out initial message
+    print(message)
+    runline = 0
+    while runline < len(options):
+        #Checks if running line corresponds to the line that the program is looking for
+        if runline == lookingFor:
+            #Prints selection indicator and makes the line bold
+            print("  - " + format.bold, end = "")
+        else:
+            #Prints list indent
+            run = 0
+            while run <= indent + 1:
+                print(" ", end = "")
+                run = run + 1
+        #Prints out list object
+        print(str(runline + 1) + ". " + options[runline])
+        print(format.end, end = "")
+        #Waits between loops
+        time.sleep(delay)
+        #Moves to next line in list
+        runline = runline + 1
+
+#Asks for open integer value without lists
+#   message: What to print out in the beginning (String)
+#   min: Lower limit of range, must be less than max, if given (Integer, default "N/A" to prevent usage) 
+#   max: Upper limit of range, must be greater than min, if given (Integer, default "N/A" to prevent usage)
+#   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
+def askOpen(message, min = "N/A", max = "N/A", indent = 2):
     run = 0
     while run < indent:
         print(" ", end = "")
@@ -173,9 +240,95 @@ def askOpen(message, indent = 2):
                 print(" ", end = "")
                 run = run + 1
             decision = input("> ")
+    #Checks if decision is greater than minimum
+    if min != "N/A" and max == "N/A":
+        while decision < min:
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            print("Invalid input!")
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            decision = input("> ")
+            while type(decision) != int:
+                try:
+                    decision = int(decision)
+                except:
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    print("Invalid input!")
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    decision = input("> ")
+    #Checks if decision is less than maximum
+    if max != "N/A" and min == "N/A":
+        while decision > max:
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            print("Invalid input!")
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            decision = input("> ")
+            while type(decision) != int:
+                try:
+                    decision = int(decision)
+                except:
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    print("Invalid input!")
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    decision = input("> ")
+    #Checks if decision is greater than minimum and less than maximum
+    if max != "N/A" and min != "N/A":
+        while decision > max or decision < min:
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            print("Invalid input!")
+            run = 0
+            while run <= indent:
+                print(" ", end = "")
+                run = run + 1
+            decision = input("> ")
+            while type(decision) != int:
+                try:
+                    decision = int(decision)
+                except:
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    print("Invalid input!")
+                    run = 0
+                    while run <= indent:
+                        print(" ", end = "")
+                        run = run + 1
+                    decision = input("> ")
+    #Returns input
     return decision
 
+#Asks for a string from user
+#   message: What to print out in the beginning (String)
+#   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
 def askString(message, indent = 2):
+    #Prints indent and message
     run = 0
     while run <= indent:
         print(" ", end = "")
@@ -185,10 +338,11 @@ def askString(message, indent = 2):
     while run <= indent:
         print(" ", end = "")
         run = run + 1
-    decision = input("> ")
+    #Asks for input
+    decision = str(input("> "))
     return decision
 
+#Pauses program to ask for input to continue
 def askToContinue():
+    #Asks to continue, x is an unused variable
     x = input("  Press " + format.bold + "enter" + format.end + " to continue.   ")
-    print(format.clear)
-

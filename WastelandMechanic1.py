@@ -34,6 +34,10 @@
 import MOOSERecoded as moose
 #All animations are found in GUIAnimations.py
 import GUIAnimations as animations
+#Map generation and calling is stored in MapHandler.py
+import MapHandler as maps
+#Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
+import JSONHandler as jason
 import random
 import json
 import os
@@ -44,7 +48,9 @@ def init():
   	#Displays the logo of the MOOSE engine
 	moose.displayLogo()
 	time.sleep(1)
+	#Plays the main menu animation
 	animations.mainMenu()
 	moose.askOption("Main Menu", ["Start game", "Load game", "Settings"])
+
     
 init()

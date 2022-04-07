@@ -51,12 +51,18 @@ def init():
 	#Opens loading loop that pulls and reads JSON files, as well as printing the loading screen animation
 	x = 0
 	files = [r'items', r'vehicles', r'dialogue', r'locations', r'scenarios']
+	fileData = []
 	while x < len(files):
 		print(moose.format.clear)
-		jason.openFile(files[x])
+		fileData.append(jason.openFile(files[x]))
 		animations.loading(x * 2, top = "Loading game...")
 		time.sleep(0.2)
 		x = x + 1
+	items = fileData[0]
+	vehicles = fileData[1]
+	dialogue = fileData[2]
+	locations = fileData[3]
+	scenarios = fileData[4]
 	print(moose.format.clear)
 	animations.loading(10, top = "Loading game...")
 	time.sleep(0.5)
@@ -66,10 +72,10 @@ def init():
 	animations.mainMenu()
 	decision = moose.askOption("Main Menu", ["Start game", "Load game", "Settings"])
 	if decision == 1:
-		print(format.clear)
+		print(moose.format.clear)
 		startGame()
 	if decision == 2:
-		print(format.clear)
+		print(moose.format.clear)
 		openGame()
 	if decision == 3:
 		settings()

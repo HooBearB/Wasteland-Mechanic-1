@@ -48,9 +48,33 @@ def init():
   	#Displays the logo of the MOOSE engine
 	moose.displayLogo()
 	time.sleep(1)
+	#Opens loading loop that pulls and reads JSON files, as well as printing the loading screen animation
+	x = 0
+	files = [r'items', r'vehicles', r'dialogue', r'locations', r'scenarios']
+	while x < len(files):
+		print(moose.format.clear)
+		jason.openFile(files[x])
+		animations.loading(x * 2, top = "Loading game...")
+		time.sleep(0.2)
+		x = x + 1
+	print(moose.format.clear)
+	animations.loading(10, top = "Loading game...")
+	time.sleep(0.5)
+	print(moose.format.clear)
+	time.sleep(1)
 	#Plays the main menu animation
 	animations.mainMenu()
-	moose.askOption("Main Menu", ["Start game", "Load game", "Settings"])
+	decision = moose.askOption("Main Menu", ["Start game", "Load game", "Settings"])
+	if decision == 1:
+		print(format.clear)
+		startGame()
+	if decision == 2:
+		print(format.clear)
+		openGame()
+	if decision == 3:
+		settings()
 
-    
+def startGame():
+	decision = moose.askOption("Choose a scenario", ["Normal"])
+
 init()

@@ -81,6 +81,14 @@ def init():
 		settings()
 
 def startGame():
-	decision = moose.askOption("Choose a scenario", ["Normal"])
+	scenarios = []
+	scenarioDisp = []
+	x = 0
+	while x < len(scenarios):
+		scenarios
+	decision = moose.askOption("Choose a scenario:", scenarios)
+	chosenScenario = scenarios[decision]
+
+
 
 init()

@@ -87,6 +87,7 @@ def init():
 		settings()
 
 def startGame():
+	global gameData
 	scenarioDisp = []
 	scenarioList = scenarios["usable"]
 	x = 0
@@ -95,20 +96,54 @@ def startGame():
 		x = x + 1
 	decision = moose.askOption("Choose a scenario:", scenarioDisp)
 	chosenScenario = scenarioList[decision - 1]
+	loadedScenario = scenarios[chosenScenario]
 	print(moose.format.clear)
-	moose.scrollingText(moose.format.bold + scenarios[chosenScenario]["name"] + moose.format.end)
+	moose.scrollingText(moose.format.bold + loadedScenario["name"] + moose.format.end)
 	time.sleep(0.5)
 	x = 0
-	while x < len(scenarios[chosenScenario]["description"]):
-		moose.scrollingText(scenarios[chosenScenario]["description"][x])
+	while x < len(loadedScenario["description"]):
+		moose.scrollingText(loadedScenario["description"][x])
+		time.sleep(0.75)
 		x = x + 1
 	time.sleep(0.5)
 	print()
-	print("  Trip length: " + str(scenarios[chosenScenario]["journeylength"]))
+	print("   Start date: " + str(loadedScenario["month"]) + "/" + str(loadedScenario["day"]) + "/" + str(loadedScenario["year"]))
+	print("  Trip length: " + str(loadedScenario["journeylength"]))
 	time.sleep(0.5)
 	decision = moose.askOption("", ["Start game", "Back to scenario selection"])
 	if decision == 1:
-		x = x
+		try:
+			direct = loadedScenario["director"]
+		except:
+			direct = "choice"
+		try:
+			foodrate = loadedScenario["food"]
+		except:
+			foodrate = 1
+		try:
+			waterrate = loadedScenario["water"]
+		except:
+			waterrate = 1
+		try:
+			twinkierate = loadedScenario["twinkies"]
+		except:
+			twinkierate = 1
+		try:
+			radchange = loadedScenario["rad_change"]
+		except:
+			radchange = 1
+		try:
+			banditchange = loadedScenario["bandits"]
+		except:
+			banditchange = 1
+
+		class gameData:
+			director = direct
+			food = 1 * foodrate
+			water = 1 * waterrate
+			twinkies = 1 * twinkierate
+			radiation = 1 * radchange
+			bandits = 1 * banditchange
 	if decision == 2:
 		print(moose.format.clear)
 		startGame()

@@ -1,5 +1,5 @@
 {
-    "usable": ["postapoc", "ut", "2007", "chal:alr", "chal:dgw"],
+    "usable": ["postapoc", "ut", "2007", "chal:alr", "chal:fam", "chal:dgw"],
 
     "postapoc": {
         "name": "Post-apocalypse",
@@ -7,19 +7,25 @@
         "year": 2013,
         "month": 7,
         "day": 6,
-        "objective": "Seattle",
-        "arrival": "seattle_arrival",
+        "start_location": "Middleton, Tennessee",
+        "objective": "Cleveland, Ohio",
+        "arrival": "cleveland_arrival",
         "journeylength": 500
     },
     "ut": {
-        "name": "Post-apocalypse",
-        "description": ["The original Wasteland Mechanic story.", "Journey to Seattle to find a safe place to settle down."],
+        "name": "Undead territory",
+        "description": ["It's like that one film, y'know, with Woody Harrelson?", "And Jesse Eisenberg?", "Don't remember that?", "Alright."],
         "year": 2009,
         "month": 9,
         "day": 25,
-        "objective": "",
-        "arrival": "seattle_arrival",
-        "journeylength": 500
+        "start_location": "Atlanta, Georgia",
+        "objective": "Amusement Park in Los Angeles, California",
+        "arrival": "amusement_arrival",
+        "journeylength": 1250,
+
+        "rad_change": 0.5,
+        "bandits": 1.5,
+        "twinkies": 0.05
     },
     "2007": {
         "name": "2007",
@@ -27,7 +33,8 @@
         "year": 2007,
         "month": 2,
         "day": 6,
-        "objective": "Tennessee",
+        "start_location": "Midland, Texas",
+        "objective": "Middleton, Tennessee",
         "arrival": "tn_arrival",
         "journeylength": 500,
 
@@ -40,18 +47,34 @@
         "year": 2013,
         "month": 7,
         "day": 6,
-        "objective": "Seattle",
-        "arrival": "seattle_arrival",
-        "journeylength": 2000
+        "objective": "Cleveland, Ohio",
+        "arrival": "cleveland_arrival",
+        "journeylength": 2000,
+
+        "food": 1.1,
+        "water": 1.1
+    },
+    "chal:fam": {
+        "name": "Challenge: Famine",
+        "description": ["Before the bombs fucked everything up, famine was taking its toll on America.", "As a result, there's less food along your route.", "You better hope berries sound good right now."],
+        "year": 2013,
+        "month": 7,
+        "day": 6,
+        "objective": "Cleveland, Ohio",
+        "arrival": "cleveland_arrival",
+        "journeylength": 2000,
+
+        "food": 0.25,
+        "water": 0.75
     },
     "chal:dgw": {
         "name": "Challenge: Deal Gone Wrong",
-        "description": ["Apparently you pissed off a roaming bandit gang while in Tennessee.", "Oh well. Looks like that trip to Seattle is coming sooner than you thought."],
+        "description": ["Apparently you pissed off a roaming bandit gang while in Tennessee.", "Oh well. Looks like that trip to Cleveland is coming sooner than you thought."],
         "year": 2011,
         "month": 2,
         "day": 3,
-        "objective": "Seattle",
-        "arrival": "seattle_arrival",
+        "objective": "Cleveland, Ohio",
+        "arrival": "cleveland_arrival",
         "journeylength": 750,
 
         "bandits": 4

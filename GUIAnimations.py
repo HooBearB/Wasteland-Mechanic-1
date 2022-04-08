@@ -159,3 +159,26 @@ def loading(stage, top = ""):
 ----------------------------
          ██████████      ,  
         """)
+
+def arrival(type):
+    if type == "cleveland_arrival":
+        print("""
+      /           ______________
+   , /           | NOW ENTERING |
+ ,  /            |  CLEVELAND   |
+   /            /|______________|
+  /            /   |        , |
+ /            /    |   ,      |  ,
+/            /   ,      ,      ,
+        """)
+        time.sleep(0.25)
+        print("""
+      /           ______________
+   , /           | NOW ENTERING |
+ ,  /            |  CLEVELAND   |
+   /            /|______________|
+  /            /   |        , |
+ /            /    |   ,      |  ,
+/            /   ,      ,      ,
+        """)
+        time.sleep(0.25)

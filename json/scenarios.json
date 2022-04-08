@@ -1,3 +1,59 @@
 {
-    
+    "usable": ["postapoc", "ut", "2007", "chal:alr", "chal:dgw"],
+
+    "postapoc": {
+        "name": "Post-apocalypse",
+        "description": ["The original Wasteland Mechanic story.", "Journey to Seattle to find a safe place to settle down."],
+        "year": 2013,
+        "month": 7,
+        "day": 6,
+        "objective": "Seattle",
+        "arrival": "seattle_arrival",
+        "journeylength": 500
+    },
+    "ut": {
+        "name": "Post-apocalypse",
+        "description": ["The original Wasteland Mechanic story.", "Journey to Seattle to find a safe place to settle down."],
+        "year": 2009,
+        "month": 9,
+        "day": 25,
+        "objective": "",
+        "arrival": "seattle_arrival",
+        "journeylength": 500
+    },
+    "2007": {
+        "name": "2007",
+        "description": ["It's 2007, and the bombs dropped exactly 2 weeks ago.", "Find your way to Tennessee or die trying."],
+        "year": 2007,
+        "month": 2,
+        "day": 6,
+        "objective": "Tennessee",
+        "arrival": "tn_arrival",
+        "journeylength": 500,
+
+        "rad_change": 3,
+        "bandits": 2
+    },
+    "chal:alr": {
+        "name": "Challenge: A Long Road",
+        "description": ["Normal post-apocalypse gameplay, except you're taking the scenic route."],
+        "year": 2013,
+        "month": 7,
+        "day": 6,
+        "objective": "Seattle",
+        "arrival": "seattle_arrival",
+        "journeylength": 2000
+    },
+    "chal:dgw": {
+        "name": "Challenge: Deal Gone Wrong",
+        "description": ["Apparently you pissed off a roaming bandit gang while in Tennessee.", "Oh well. Looks like that trip to Seattle is coming sooner than you thought."],
+        "year": 2011,
+        "month": 2,
+        "day": 3,
+        "objective": "Seattle",
+        "arrival": "seattle_arrival",
+        "journeylength": 750,
+
+        "bandits": 4
+    }
 }

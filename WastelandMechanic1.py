@@ -44,13 +44,19 @@ import os
 import time
 
 def init():
+	global items
+	global vehicles
+	global dialogue
+	global locations
+	global scenarios
+
 	time.sleep(1)
   	#Displays the logo of the MOOSE engine
 	moose.displayLogo()
 	time.sleep(1)
 	#Opens loading loop that pulls and reads JSON files, as well as printing the loading screen animation
 	x = 0
-	files = [r'items', r'vehicles', r'dialogue', r'locations', r'scenarios']
+	files = [r'items', r'vehicles', r'media', r'locations', r'scenarios']
 	fileData = []
 	while x < len(files):
 		print(moose.format.clear)
@@ -81,13 +87,31 @@ def init():
 		settings()
 
 def startGame():
-	scenarios = []
 	scenarioDisp = []
+	scenarioList = scenarios["usable"]
 	x = 0
-	while x < len(scenarios):
-		scenarios
-	decision = moose.askOption("Choose a scenario:", scenarios)
-	chosenScenario = scenarios[decision]
+	while x < len(scenarioList):
+		scenarioDisp.append(scenarios[scenarioList[x]]["name"])
+		x = x + 1
+	decision = moose.askOption("Choose a scenario:", scenarioDisp)
+	chosenScenario = scenarioList[decision - 1]
+	print(moose.format.clear)
+	moose.scrollingText(moose.format.bold + scenarios[chosenScenario]["name"] + moose.format.end)
+	time.sleep(0.5)
+	x = 0
+	while x < len(scenarios[chosenScenario]["description"]):
+		moose.scrollingText(scenarios[chosenScenario]["description"][x])
+		x = x + 1
+	time.sleep(0.5)
+	print()
+	print("  Trip length: " + str(scenarios[chosenScenario]["journeylength"]))
+	time.sleep(0.5)
+	decision = moose.askOption("", ["Start game", "Back to scenario selection"])
+	if decision == 1:
+		x = x
+	if decision == 2:
+		print(moose.format.clear)
+		startGame()
 
 
 

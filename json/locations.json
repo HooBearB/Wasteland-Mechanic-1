@@ -1,12 +1,49 @@
 {
-    "list": ["gas", "church", "grocery", "boxstore", "house", "apartment", "garage", "restaurant", "cafe", "junkyard", "bar"],
+    "list": ["gas", "church", "grocery", "boxstore", "house", "apartment", "garage", "restaurant", "cafe", "junkyard", "bar", "weaponsstore"],
+
+    "unmapped": {
+        "name": "Unmapped",
+        "character": " ",
+        "type": "other",
+        "loot": [],
+        "lootrate": [],
+        "lootmax": [],
+        "haspump": false,
+        "npc": 0,
+        "npctype": [] 
+    },
+
+    "objective": {
+        "name": "obj",
+        "character": "!",
+        "type": "other",
+        "loot": [],
+        "lootrate": [],
+        "lootmax": [],
+        "haspump": false,
+        "npc": 0,
+        "npctype": [] 
+    },
+
+    "road": {
+        "name": "Road",
+        "character": "-",
+        "type": "other",
+        "loot": ["forage"],
+        "lootrate": [50],
+        "lootmax": [1],
+        "haspump": false,
+        "npc": 0,
+        "npctype": [] 
+    },
 
     "gas": {
         "name": "Gas station",
+        "character": "%",
         "type": "gas",
-        "loot": ["food", "water", "fuel", "parts"],
-        "lootrate": [75, 50, 10, 1],
-        "lootmax": [10, 5, 1, 2],
+        "loot": ["food", "water", "fuel", "parts", "medical"],
+        "lootrate": [75, 50, 10, 1, 30],
+        "lootmax": [10, 5, 1, 2, 1],
         "haspump": true,
         "npc": 10,
         "npctype": ["merch"] 
@@ -14,6 +51,7 @@
 
     "church": {
         "name": "Church",
+        "character": "t",
         "type": "other",
         "loot": ["food", "water"],
         "lootrate": [10, 5],
@@ -25,10 +63,11 @@
 
     "grocery": {
         "name": "Grocery store",
+        "character": "g",
         "type": "fw",
-        "loot": ["food", "water"],
-        "lootrate": [100, 100],
-        "lootmax": [15, 5],
+        "loot": ["food", "water", "medical"],
+        "lootrate": [100, 100, 25],
+        "lootmax": [15, 5, 3],
         "haspump": false,
         "npc": 10,
         "npctype": ["merch"]
@@ -36,10 +75,11 @@
 
     "boxstore": {
         "name": "Box store",
+        "character": "b",
         "type": "fw",
-        "loot": ["food", "water", "parts", "meleeweapons", "rangedweapons", "ammo"],
-        "lootrate": [95, 95, 10, 60, 50, 75],
-        "lootmax": [10, 5, 2, 3, 5, 20],
+        "loot": ["food", "water", "parts", "meleeweapons", "rangedweapons", "ammo", "medical"],
+        "lootrate": [95, 95, 10, 60, 50, 75, 80],
+        "lootmax": [10, 5, 2, 3, 5, 20, 5],
         "haspump": true,
         "npc": 10,
         "npctype": ["merch", "res"] 
@@ -47,10 +87,11 @@
 
     "house": {
         "name": "House",
+        "character": "^",
         "type": "other",
-        "loot": ["food", "water", "fuel", "parts", "meleeweapons", "rangedweapons", "ammo"],
-        "lootrate": [95, 80, 20, 10, 30, 30, 30],
-        "lootmax": [5, 2, 1, 3, 2, 1, 5],
+        "loot": ["food", "water", "fuel", "parts", "meleeweapons", "rangedweapons", "ammo", "medical"],
+        "lootrate": [95, 80, 20, 10, 30, 30, 30, 40],
+        "lootmax": [5, 2, 1, 3, 2, 1, 5, 3],
         "haspump": false,
         "npc": 10,
         "npctype": ["merch", "res"]
@@ -58,10 +99,11 @@
 
     "apartment": {
         "name": "Apartment complex",
+        "character": "#",
         "type": "other",
-        "loot": ["food", "water", "meleeweapons", "rangedweapons", "ammo"],
-        "lootrate": [30, 20, 25, 15, 20],
-        "lootmax": [5, 2, 2, 1, 1],
+        "loot": ["food", "water", "meleeweapons", "rangedweapons", "ammo", "medical"],
+        "lootrate": [30, 20, 25, 15, 20, 10],
+        "lootmax": [5, 2, 2, 1, 1, 3],
         "haspump": false,
         "npc": 20,
         "npctype": ["merch", "res"]
@@ -69,6 +111,7 @@
 
     "garage": {
         "name": "Garage",
+        "character": "g",
         "type": "parts",
         "loot": ["fuel", "parts"],
         "lootrate": [80, 100],
@@ -80,6 +123,7 @@
 
     "restaurant": {
         "name": "Restaurant",
+        "character": "r",
         "type": "fw",
         "loot": ["food", "water"],
         "lootrate": [80, 80],
@@ -91,6 +135,7 @@
 
     "cafe": {
         "name": "Cafe",
+        "character": "c",
         "type": "fw",
         "loot": ["food", "water"],
         "lootrate": [70, 40],
@@ -102,6 +147,7 @@
     
     "junkyard": {
         "name": "Junkyard",
+        "character": "j",
         "type": "parts",
         "loot": ["food", "water", "fuel", "parts", "meleeweapons", "rangedweapons"],
         "lootrate": [80, 80, 50, 100, 20, 40],
@@ -113,6 +159,7 @@
 
     "bar": {
         "name": "Bar",
+        "character": "[",
         "type": "parts",
         "loot": ["food", "water", "meleeweapons", "rangedweapons", "ammo"],
         "lootrate": [80, 80, 50, 50, 20],
@@ -120,5 +167,29 @@
         "haspump": false,
         "npc": 10,
         "npctype": ["merch"]
+    },
+
+    "weaponsstore": {
+        "name": "Weapons store",
+        "character": "w",
+        "type": "weapons",
+        "loot": ["meleeweapons", "rangedweapons", "ammo"],
+        "lootrate": [80, 80, 90],
+        "lootmax": [3, 10, 20],
+        "haspump": false,
+        "npc": 10,
+        "npctype": ["merch"]
+    },
+
+    "clinic": {
+        "name": "Clinic",
+        "character": "+",
+        "type": "medical",
+        "loot": ["food", "water", "medical"],
+        "lootrate": [80, 80, 90],
+        "lootmax": [3, 2, 10],
+        "haspump": false,
+        "npc": 10,
+        "npctype": ["merch", "med"]
     }
 }

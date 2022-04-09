@@ -36,6 +36,8 @@ import MOOSERecoded as moose
 import GUIAnimations as animations
 #Map generation and calling is stored in MapHandler.py
 import MapHandler as maps
+#Inventory handling and management is stored in InventoryHandler.py
+import InventoryHandler as inv
 #Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
 import JSONHandler as jason
 import random
@@ -88,6 +90,10 @@ def init():
 
 def startGame():
 	global gameData
+	global gameTime
+	global character
+	global currentCar
+
 	scenarioDisp = []
 	scenarioList = scenarios["usable"]
 	x = 0
@@ -144,9 +150,34 @@ def startGame():
 			twinkies = 1 * twinkierate
 			radiation = 1 * radchange
 			bandits = 1 * banditchange
+			end = loadedScenario["journeylength"]
+		class gameTime:
+			month = loadedScenario["month"]
+			day = loadedScenario["day"]
+			year = loadedScenario["year"]
+		class character:
+			hunger = 100
+			thirst = 100
+			health = 100
+		class currentCar:
+			id = "1998eco"
+
+		gameLoop()
 	if decision == 2:
 		print(moose.format.clear)
 		startGame()
+
+def gameLoop():
+	global map
+	
+	position = 0
+	map = maps.startGen(gameData.end)
+	while position < gameData.end:
+		print(moose.format.clear)
+		map = maps.revealGen(map, position, maps.director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
+		displayMap = maps.formatMap(map, position, locations)
+		moose.scrollingText(displayMap[position:position + 20])
+		decision = moose.askOption(str(gameTime.month) + "/" + str(gameTime.day) + "/" + str(gameTime.year), ["Start driving"])
 
 
 

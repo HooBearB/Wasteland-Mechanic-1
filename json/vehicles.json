@@ -1,13 +1,60 @@
 {
-    "buggy": {
+    "list": ["cav_alm1", "cav_alm2"],
+
+    "cav_alm1": {
+        "name": "1986 Cavice Almida",
         "blueprint": {
-            "line0": " ┌─┐ ",
-            "line1": "╭┤ ├╮",
-            "line2": "╟┴─┴╢",
-            "line3": "│   │",
-            "line4": "╟───╢",
-            "line5": "└───┘"
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│      │",
+            "line6": "║      ║",
+            "line7": "└──────┘"
         },
-        "display": [" ┌─┐ ", "╭┤ ├╮", "╟┴─┴╢", "│   │", "╟───╢", "└───┘"]
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│      │", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "line4": " ________",
+            "line3": "/___|____\\___",
+            "line2": "|    `       |",
+            "line1": "\\-(_)----(_)-/"
+        },
+        "sidedisplay": [" ________", "/___|____\\___", "|    `       |", "\\-(_)----(_)-/"],
+
+        "engine": "econ",
+        "fuel_tank": "low_cap",
+        "radiator": "econ",
+        "battery": "econ",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "econ",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter"
+    },
+    "cav_alm2": {
+        "name": "1993 Cavice Almida",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "║      ║",
+            "line7": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "║      ║", "└──────┘"],
+
+        "engine": "econ",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "econ",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "econ",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter"
     }
 }

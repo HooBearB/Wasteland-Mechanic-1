@@ -97,3 +97,7 @@ while 1 == 1:
     while x < len(vehicles[chosenvehicle]["sidedisplay"]):
         print(vehicles[chosenvehicle]["sidedisplay"][x])
         x = x + 1
+        
+    dummyvar = input("")
+
+    

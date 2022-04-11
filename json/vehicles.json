@@ -1,5 +1,7 @@
 {
-    "list": ["cav_alm1", "cav_alm2"],
+    "list": ["cav_alm1", "cav_alm2", "cav_trac1", "cav_trac2", "cav_trac3", 
+             "cav_omeg", "cav_cap1", "cav_cap2", "cav_cap3", "cav_sat1", "cav_sat2", 
+             "cav_gem", "cav_ms1", "cav_ms2", "cav_ms3", "cav_ms4", "cav_ms6"],
 
     "cav_alm1": {
         "name": "1986 Cavice Almida",
@@ -15,12 +17,13 @@
         "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│      │", "║      ║", "└──────┘"],
 
         "sideblueprint": {
-            "line4": " ________",
-            "line3": "/___|____\\___",
-            "line2": "|    `       |",
+            "scale": "1-2-3-4-5-6-7-",
+            "line4": " ________     ",
+            "line3": "/___||___\\___ ",
+            "line2": "|  _  `   _  |",
             "line1": "\\-(_)----(_)-/"
         },
-        "sidedisplay": [" ________", "/___|____\\___", "|    `       |", "\\-(_)----(_)-/"],
+        "sidedisplay": [" ________     ", "/___||___\\___ ", "|  _  `   _  |", "\\-(_)----(_)-/"],
 
         "engine": "econ",
         "fuel_tank": "low_cap",
@@ -31,8 +34,12 @@
         "tires": "econ",
         "headlights": "reg",
         "taillights": "reg",
-        "radio": "commuter"
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 40
     },
+
     "cav_alm2": {
         "name": "1993 Cavice Almida",
         "blueprint": {
@@ -46,6 +53,15 @@
         },
         "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "║      ║", "└──────┘"],
 
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-",
+            "line4": " ________     ",
+            "line3": "/___|____\\___ ",
+            "line2": "|  _ `    _  |",
+            "line1": "\\-(_)----(_)-/"
+        },
+        "sidedisplay": [" ________     ", "/___|____\\___ ", "|  _ `    _  |", "\\-(_)----(_)-/"],
+
         "engine": "econ",
         "fuel_tank": "reg",
         "radiator": "reg",
@@ -55,6 +71,624 @@
         "tires": "econ",
         "headlights": "reg",
         "taillights": "reg",
-        "radio": "commuter"
+        "radio": "commuter",
+
+        "seats": 4,
+        "cargo": 20
+    },
+
+    "cav_trac1": {
+        "name": "1991 Cavice Tracer",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└────┘│",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└────┘│", "├──────┤", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ______     ",
+            "line3": " ___/__|___\\___ ",
+            "line2": "|  _    `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["     ______     ", " ___/__|___\\___ ", "|  _    `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 5,
+        "cargo": 20
+    },
+
+    "cav_trac2": {
+        "name": "2003 Cavice Tracer",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└────┘│",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "╰──────╯"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│└────┘│", "├──────┤", "║      ║", "╰──────╯"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ______     ",
+            "line3": " ___/__|___\\___ ",
+            "line2": "|  _    `   _  )",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["     ______     ", " ___/__|___\\___ ", "|  _    `   _  )", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "modern",
+
+        "seats": 5,
+        "cargo": 20
+    },
+
+    "cav_trac3": {
+        "name": "2003 Cavice Tracer Wagon",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└────┘│",
+            "line6": "│      │",
+            "line7": "║      ║",
+            "line8": "╰──────╯"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│└────┘│", "│      │", "║      ║", "╰──────╯"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "/___/__|___\\___ ",
+            "line2": "|  _    `   _  )",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "/___/__|___\\___ ", "|  _    `   _  )", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "modern",
+
+        "seats": 5,
+        "cargo": 40
+    },
+
+    "cav_omeg": {
+        "name": "1986 Cavice Omega II",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "├──────┤", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "    _______     ",
+            "line3": " __/___|___\\___ ",
+            "line2": "|  _`   `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["    _______     ", " __/___|___\\___ ", "|  _`   `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 4,
+        "cargo": 20
+    },
+
+    "cav_cap1": {
+        "name": "1994 Cavice Capacity",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "│└────┘│",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "│└────┘│", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "||_|___|___\\___ ",
+            "line2": "|  _`   `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "||_|___|___\\___ ", "|  _`   `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 7,
+        "cargo": 20
+    },
+
+    "cav_cap2": {
+        "name": "1998 Cavice Capacity",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "│└────┘│",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "│└────┘│", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "|__|___|___\\___ ",
+            "line2": "|  _`   `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "|__|___|___\\___ ", "|  _`   `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "modern",
+
+        "seats": 7,
+        "cargo": 30
+    },
+
+    "cav_cap3": {
+        "name": "2004 Cavice Capacity",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "│└────┘│",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "│└────┘│", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "|__|___|___\\___ ",
+            "line2": "|  _`   `   _  )",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "|__|___|___\\___ ", "|  _`   `   _  )", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "modern",
+
+        "seats": 7,
+        "cargo": 30
+    },
+
+    "cav_sat1": {
+        "name": "1988 Cavice Satellite",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "│      │",
+            "line4": "├──────┤",
+            "line5": "│└─┘└─┘│",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "│      │", "├──────┤", "│└─┘└─┘│", "├──────┤", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ____       ",
+            "line3": " ___/|___\\_____ ",
+            "line2": "|  _  `     _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["     ____       ", " ___/|___\\_____ ", "|  _  `     _  |", "\\-(_)------(_)-/"],
+
+        "engine": "sport",
+        "fuel_tank": "reg",
+        "radiator": "perform",
+        "battery": "reg",
+        "transmission": "sport_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 30
+    },
+
+    "cav_sat2": {
+        "name": "1993 Cavice Satellite",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "│      │",
+            "line4": "├──────┤",
+            "line5": "│└─┘└─┘│",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "└──────┘"
+        },
+        "display": ["╭──────╮", "║      ║", "│      │", "├──────┤", "│└─┘└─┘│", "├──────┤", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ____       ",
+            "line3": " ___/____\\_____ ",
+            "line2": "|  _  `     _  )",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["     ____       ", " ___/____\\_____ ", "|  _  `     _  )", "\\-(_)------(_)-/"],
+
+        "engine": "sport",
+        "fuel_tank": "reg",
+        "radiator": "perform",
+        "battery": "high",
+        "transmission": "sport_auto",
+        "suspension": "reg",
+        "tires": "sport",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 30
+    },
+
+    "cav_gem": {
+        "name": "1996 Cavice Gemini",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│ └──┘ │",
+            "line6": "├──────┤",
+            "line7": "║      ║",
+            "line8": "╰──────╯"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│ └──┘ │", "├──────┤", "║      ║", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ______     ",
+            "line3": " ___/|__|__\\___ ",
+            "line2": "|  _     `  _  )",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": ["     ______     ", " ___/|__|__\\___ ", "|  _     `  _  )", "\\-(_)------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "reg",
+        "battery": "high",
+        "transmission": "reg_auto",
+        "suspension": "reg",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "commuter",
+
+        "seats": 4,
+        "cargo": 25
+    },
+
+    "cav_ms1": {
+        "name": "1980 Cavice M-7",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└────┘│",
+            "line5": "├──────┤",
+            "line6": "│┌────┐│",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "││┆┆┆┆││",
+            "line9": "└┴────┴┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└────┘│", "├──────┤", "│┌────┐│", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-",
+            "line4": "         ____     ",
+            "line3": " _______||__\\\\___ ",
+            "line2": "|   _     `   _  |",
+            "line1": "\\--(_)-------(_)-/"
+        },
+        "sidedisplay": ["         ____     ", " _______||__\\\\___ ", "|   _     `   _  |", "\\--(_)-------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "heavy",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 3,
+        "cargo": 80
+    },
+
+    "cav_ms2": {
+        "name": "1987 Cavice M-8",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└────┘│",
+            "line5": "├┬────┬┤",
+            "line6": "││┆┆┆┆││",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "││┆┆┆┆││",
+            "line9": "└┴────┴┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└────┘│", "├┬────┬┤", "││┆┆┆┆││", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-",
+            "line4": "         ____     ",
+            "line3": " _______||__\\___ ",
+            "line2": "|   _     `   _  |",
+            "line1": "\\--(_)-------(_)-/"
+        },
+        "sidedisplay": ["         ____     ", " _______||___\\___ ", "|   _     `   _  |", "\\--(_)-------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "heavy",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "reg",
+        "headlights": "reg",
+        "taillights": "reg",
+        "radio": "commuter",
+
+        "seats": 3,
+        "cargo": 100
+    },
+
+    "cav_ms3": {
+        "name": "1992 Cavice M-9",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "├┬────┬┤",
+            "line6": "││┆┆┆┆││",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "││┆┆┆┆││",
+            "line9": "└┴────┴┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "├┬────┬┤", "││┆┆┆┆││", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-",
+            "line4": "         ____     ",
+            "line3": " _______||__\\___ ",
+            "line2": "|   _     `   _  |",
+            "line1": "\\--(_)----===(_)-/"
+        },
+        "sidedisplay": ["         ____     ", " _______||___\\___ ", "|   _     `   _  |", "\\--(_)----===(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "reg",
+        "radiator": "heavy",
+        "battery": "reg",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "offroad",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 100
+    },
+
+    "cav_ms4": {
+        "name": "1997 Cavice M-10",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "├┬────┬┤",
+            "line6": "││┆┆┆┆││",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "││┆┆┆┆││",
+            "line9": "└┴────┴┘"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "├┬────┬┤", "││┆┆┆┆││", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-",
+            "line4": "         ____     ",
+            "line3": " _______||___\\___ ",
+            "line2": "|   _     `   _  )",
+            "line1": "\\--(_)-------(_)-/"
+        },
+        "sidedisplay": ["         ____     ", " _______||___\\___ ", "|   _     `   _  )", "\\--(_)-------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "high",
+        "radiator": "heavy",
+        "battery": "high",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "offroad",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 110
+    },
+
+    "cav_ms5": {
+        "name": "2004 Cavice M-10",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "├┬────┬┤",
+            "line6": "││┆┆┆┆││",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "││┆┆┆┆││",
+            "line9": "╰┴────┴╯"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "├┬────┬┤", "││┆┆┆┆││", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-",
+            "line4": "         ____     ",
+            "line3": " _______|____\\___ ",
+            "line2": "|   _     `   _  )",
+            "line1": "\\--(_)-------(_)-/"
+        },
+        "sidedisplay": ["         ____     ", " _______||___\\___ ", "|   _     `   _  )", "\\--(_)-------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "high",
+        "radiator": "heavy",
+        "battery": "high",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "offroad",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 110
+    },
+
+    "cav_ms6": {
+        "name": "2004 Cavice M-11 Rancher",
+        "blueprint": {
+            "line1": "╭──────╮",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└────┘│",
+            "line6": "├┬────┬┤",
+            "line7": "││┆┆┆┆││",
+            "line8": "║│┆┆┆┆│║",
+            "line9": "││┆┆┆┆││",
+            "line10": "╰┴────┴╯"
+        },
+        "display": ["╭──────╮", "║      ║", "├──────┤", "│└─┘└─┘│", "│└────┘│", "├┬────┬┤", "││┆┆┆┆││", "║│┆┆┆┆│║", "││┆┆┆┆││", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-9-10",
+            "line4": "          _____     ",
+            "line3": " ________|_|___\\___ ",
+            "line2": "|   _      `    _  )",
+            "line1": "\\--(_)---------(_)-/"
+        },
+        "sidedisplay": ["          _____     ", " ________|_|___\\___ ", "|   _      `    _  )", "\\--(_)---------(_)-/"],
+
+        "engine": "reg",
+        "fuel_tank": "high",
+        "radiator": "heavy",
+        "battery": "high",
+        "transmission": "reg_auto",
+        "suspension": "offroad",
+        "tires": "offroad",
+        "headlights": "reg",
+        "taillights": "led",
+        "radio": "commuter",
+
+        "seats": 2,
+        "cargo": 110
     }
 }

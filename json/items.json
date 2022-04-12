@@ -1,3 +1,105 @@
 {
-    
+    "econ_eng": {
+        "name": "Economy engine",
+        "type": "engine",
+        "weight": 250,
+        "condition": 300,
+        "hp": 65,
+        "temp": 200,
+        "maxtemp": 280
+    },
+    "reg_eng": {
+        "name": "Regular engine",
+        "type": "engine",
+        "weight": 425,
+        "condition": 500,
+        "hp": 110,
+        "temp": 230,
+        "maxtemp": 300
+    },
+    "tuned_eng": {
+        "name": "Tuned engine",
+        "type": "engine",
+        "weight": 440,
+        "condition": 750,
+        "hp": 140,
+        "temp": 215,
+        "maxtemp": 290
+    },
+    "sport_eng": {
+        "name": "Sport engine",
+        "type": "engine",
+        "weight": 500,
+        "condition": 800,
+        "hp": 160,
+        "temp": 220,
+        "maxtemp": 280
+    },
+    "heavy_eng": {
+        "name": "Heavy-duty engine",
+        "type": "engine",
+        "weight": 600,
+        "condition": 1000,
+        "hp": 150,
+        "temp": 250,
+        "maxtemp": 270
+    },
+
+    "low_cap_tank": {
+        "name": "Low capacity tank",
+        "type": "fueltank",
+        "weight": 3,
+        "condition": 100,
+        "capacity": 10
+    },
+    "reg_tank": {
+        "name": "Regular tank",
+        "type": "fueltank",
+        "weight": 5,
+        "condition": 150,
+        "capacity": 20
+    },
+    "high_cap_tank": {
+        "name": "High capacity tank",
+        "type": "fueltank",
+        "weight": 10,
+        "condition": 250,
+        "capacity": 40
+    },
+    "reinforced_tank": {
+        "name": "Reinforced tank",
+        "type": "fueltank",
+        "weight": 20,
+        "condition": 500,
+        "capacity": 25
+    },
+
+    "econ_rad": {
+        "name": "Economy radiator",
+        "type": "radiator",
+        "weight": 7.5,
+        "condition": 150,
+        "temp": 190
+    },
+    "reg_rad": {
+        "name": "Regular radiator",
+        "type": "radiator",
+        "weight": 8,
+        "condition": 175,
+        "temp": 225
+    },
+    "performance_rad": {
+        "name": "Regular radiator",
+        "type": "radiator",
+        "weight": 10,
+        "condition": 180,
+        "temp": 260
+    },
+    "heavy_rad": {
+        "name": "Heavy-duty radiator",
+        "type": "radiator",
+        "weight": 8,
+        "condition": 175,
+        "temp": 225
+    }
 }

@@ -45,6 +45,8 @@
         "maxtemp": 270
     },
 
+
+
     "low_cap_tank": {
         "name": "Low capacity tank",
         "type": "fueltank",
@@ -74,6 +76,8 @@
         "capacity": 25
     },
 
+
+
     "econ_rad": {
         "name": "Economy radiator",
         "type": "radiator",
@@ -101,5 +105,36 @@
         "weight": 8,
         "condition": 175,
         "temp": 225
+    },
+
+
+    
+    "econ_bat": {
+        "name": "Economy battery",
+        "type": "battery",
+        "weight": 30,
+        "condition" : 100,
+        "charge": 200
+    },
+    "reg_bat": {
+        "name": "Regular battery",
+        "type": "battery",
+        "weight": 40,
+        "condition" : 200,
+        "charge": 500
+    },
+    "high_bat": {
+        "name": "High charge",
+        "type": "battery",
+        "weight": 40,
+        "condition" : 200,
+        "charge": 750
+    },
+    "heavy_bat": {
+        "name": "Heavy-duty battery",
+        "type": "battery",
+        "weight": 45,
+        "condition" :  400,
+        "charge": 500
     }
 }

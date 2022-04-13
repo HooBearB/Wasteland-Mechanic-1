@@ -98,16 +98,22 @@ while 1 == 1:
     while x < len(vehicles[chosenvehicle]["sidedisplay"]):
         print(vehicles[chosenvehicle]["sidedisplay"][x])
         x = x + 1
-    dummyvar = input("")
     partlist = vehicles[chosenvehicle]
-    print("Engine: " + parts[partlist["engine"]]["name"])
-    print("Fuel tank: " + parts[partlist["fuel_tank"]]["name"])
-    print("Radiator: " + parts[partlist["radiator"]]["name"])
-    print("Battery: " + parts[partlist["battery"]]["name"])
-    print("Transmission: " + parts[partlist["transmission"]]["name"])
-    print("Suspension: " + parts[partlist["suspension"]]["name"])
-    print("Tires: " + parts[partlist["tires"]]["name"])
-    print("Headlights: " + parts[partlist["headlights"]]["name"])
-    print("Taillights: " + parts[partlist["taillights"]]["name"])
-    print("Radio: " + parts[partlist["radio"]]["name"])
-    dummyvar = input("")
+    decision = 0
+    while decision != 3:
+        decision = askOption("Vehicle menu", ["View parts", "View stats", "Get new car"])
+        print()
+        if decision == 1:
+            print("Engine: " + parts[partlist["engine"]]["name"])
+            print("Fuel tank: " + parts[partlist["fuel_tank"]]["name"])
+            print("Radiator: " + parts[partlist["radiator"]]["name"])
+            print("Battery: " + parts[partlist["battery"]]["name"])
+            print("Transmission: " + parts[partlist["transmission"]]["name"])
+            print("Suspension: " + parts[partlist["suspension"]]["name"])
+            print("Tires: " + parts[partlist["tires"]]["name"])
+            print("Headlights: " + parts[partlist["headlights"]]["name"])
+            print("Taillights: " + parts[partlist["taillights"]]["name"])
+            print("Radio: " + parts[partlist["radio"]]["name"])
+        if decision == 2:
+            print("Max speed: " + str(round((300 * (parts[partlist["engine"]]["hp"] ** (1/3))) / (partlist["weight"] ** (1/3)))) + "mph")
+            print("Battery life: " + str(round(parts[partlist["battery"]]["charge"] / ((parts[partlist["headlights"]]["chargetaken"] * 2) + (parts[partlist["taillights"]]["chargetaken"] * 2) + parts[partlist["radio"]]["chargetaken"]), ndigits = 2)) + " hours")

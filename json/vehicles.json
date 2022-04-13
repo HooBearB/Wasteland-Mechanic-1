@@ -38,7 +38,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 40
+        "cargo": 40,
+        "weight": 1500
     },
 
     "cav_alm2": {
@@ -75,7 +76,8 @@
         "radio": "commuter_radio",
 
         "seats": 4,
-        "cargo": 20
+        "cargo": 20,
+        "weight": 1800
     },
 
     "cav_trac1": {
@@ -113,7 +115,8 @@
         "radio": "commuter_radio",
 
         "seats": 5,
-        "cargo": 20
+        "cargo": 20,
+        "weight": 2350
     },
 
     "cav_trac2": {
@@ -139,7 +142,7 @@
         },
         "sidedisplay": ["     ______     ", " ___/__|___\\___ ", "|  _    `   _  )", "\\-(_)------(_)-/"],
 
-        "engine": "reg_end",
+        "engine": "reg_eng",
         "fuel_tank": "reg_tank",
         "radiator": "reg_rad",
         "battery": "reg_bat",
@@ -151,7 +154,8 @@
         "radio": "modern_radio",
 
         "seats": 5,
-        "cargo": 20
+        "cargo": 20,
+        "weight": 1100
     },
 
     "cav_trac3": {
@@ -189,7 +193,8 @@
         "radio": "modern_radio",
 
         "seats": 5,
-        "cargo": 40
+        "cargo": 40,
+        "weight": 1200
     },
 
     "cav_omeg": {
@@ -227,7 +232,8 @@
         "radio": "commuter_radio",
 
         "seats": 4,
-        "cargo": 20
+        "cargo": 20,
+        "weight": 1900
     },
 
     "cav_cap1": {
@@ -265,7 +271,8 @@
         "radio": "commuter_radio",
 
         "seats": 7,
-        "cargo": 20
+        "cargo": 20,
+        "weight": 3800
     },
 
     "cav_cap2": {
@@ -300,10 +307,11 @@
         "tires": "reg_tire",
         "headlights": "reg_headlamp",
         "taillights": "led_taillight",
-        "radio": "modern_radio",
+        "radio": "commuter_radio",
 
         "seats": 7,
-        "cargo": 30
+        "cargo": 30,
+        "weight": 4000
     },
 
     "cav_cap3": {
@@ -341,7 +349,8 @@
         "radio": "modern",
 
         "seats": 7,
-        "cargo": 30
+        "cargo": 30,
+        "weight": 4100
     },
 
     "cav_sat1": {
@@ -379,7 +388,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 30
+        "cargo": 30,
+        "weight": 3000
     },
 
     "cav_sat2": {
@@ -417,7 +427,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 30
+        "cargo": 30,
+        "weight": 2900
     },
 
     "cav_gem": {
@@ -455,7 +466,8 @@
         "radio": "commuter_radio",
 
         "seats": 4,
-        "cargo": 25
+        "cargo": 25,
+        "weight": 3300
     },
 
     "cav_ms1": {
@@ -494,7 +506,8 @@
         "radio": "commuter_radio",
 
         "seats": 3,
-        "cargo": 80
+        "cargo": 80,
+        "weight": 3800
     },
 
     "cav_ms2": {
@@ -533,7 +546,8 @@
         "radio": "commuter_radio",
 
         "seats": 3,
-        "cargo": 100
+        "cargo": 100,
+        "weight": 4300
     },
 
     "cav_ms3": {
@@ -572,7 +586,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 100
+        "cargo": 100,
+        "weight": 4625
     },
 
     "cav_ms4": {
@@ -611,7 +626,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 110
+        "cargo": 110,
+        "weight": 5550
     },
 
     "cav_ms5": {
@@ -650,7 +666,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 110
+        "cargo": 110,
+        "weight": 4675
     },
 
     "cav_ms6": {
@@ -690,7 +707,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 110
+        "cargo": 110,
+        "weight": 4875
     },
 
     "cav_msss": {
@@ -729,7 +747,8 @@
         "radio": "modern_radio",
 
         "seats": 2,
-        "cargo": 110
+        "cargo": 110,
+        "weight": 4750
     },
 
     "cav_cs1": {
@@ -767,7 +786,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 130
+        "cargo": 130,
+        "weight": 4800
     },
 
     "cav_cs2": {
@@ -805,7 +825,8 @@
         "radio": "commuter_radio",
 
         "seats": 2,
-        "cargo": 120
+        "cargo": 120,
+        "weight": 4775
     },
 
     "cav_cs3": {
@@ -843,6 +864,7 @@
         "radio": "cb_radio",
 
         "seats": 3,
-        "cargo": 100
+        "cargo": 100,
+        "weight": 4900
     }
 }

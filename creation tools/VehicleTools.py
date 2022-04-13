@@ -81,6 +81,7 @@ def loadFiles(name):
     return items
 
 vehicles = loadFiles('vehicles')
+parts = loadFiles('items')
 
 list = vehicles["list"]
 while 1 == 1:
@@ -97,7 +98,16 @@ while 1 == 1:
     while x < len(vehicles[chosenvehicle]["sidedisplay"]):
         print(vehicles[chosenvehicle]["sidedisplay"][x])
         x = x + 1
-        
     dummyvar = input("")
-
-    
+    partlist = vehicles[chosenvehicle]
+    print("Engine: " + parts[partlist["engine"]]["name"])
+    print("Fuel tank: " + parts[partlist["fuel_tank"]]["name"])
+    print("Radiator: " + parts[partlist["radiator"]]["name"])
+    print("Battery: " + parts[partlist["battery"]]["name"])
+    print("Transmission: " + parts[partlist["transmission"]]["name"])
+    print("Suspension: " + parts[partlist["suspension"]]["name"])
+    print("Tires: " + parts[partlist["tires"]]["name"])
+    print("Headlights: " + parts[partlist["headlights"]]["name"])
+    print("Taillights: " + parts[partlist["taillights"]]["name"])
+    print("Radio: " + parts[partlist["radio"]]["name"])
+    dummyvar = input("")

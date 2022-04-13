@@ -300,7 +300,7 @@
         "type": "headlight",
         "weight": 5,
         "condition": 25,
-        "chargetaken": 0.5,
+        "chargetaken": 3,
         "illumination": 300
     },
     "xenon_headlamp": {
@@ -308,7 +308,7 @@
         "type": "headlight",
         "weight": 6,
         "condition": 30,
-        "chargetaken": 1,
+        "chargetaken": 5,
         "illumination": 500
     },
     "emer_headlamp": {
@@ -316,7 +316,7 @@
         "type": "headlight",
         "weight": 7.5,
         "condition": 100,
-        "chargetaken": 2,
+        "chargetaken": 7.5,
         "illumination": 600
     },
     "reinforced_headlamp": {
@@ -324,7 +324,7 @@
         "type": "headlight",
         "weight": 8,
         "condition": 150,
-        "chargetaken": 0.5,
+        "chargetaken": 2,
         "illumination": 250
     },
 
@@ -335,7 +335,7 @@
         "type": "taillight",
         "weight": 5,
         "condition": 25,
-        "chargetaken": 0.25,
+        "chargetaken": 1,
         "illumination": 30
     },
     "led_taillight": {
@@ -343,7 +343,7 @@
         "type": "taillight",
         "weight": 6,
         "condition": 30,
-        "chargetaken": 0.5,
+        "chargetaken": 2,
         "illumination": 50
     },
     "emer_taillight": {
@@ -351,7 +351,7 @@
         "type": "taillight",
         "weight": 7.5,
         "condition": 100,
-        "chargetaken": 1,
+        "chargetaken": 4,
         "illumination": 60
     },
     "reinforced_taillight": {
@@ -359,7 +359,7 @@
         "type": "taillight",
         "weight": 8,
         "condition": 150,
-        "chargetaken": 0.25,
+        "chargetaken": 1,
         "illumination": 25
     },
 
@@ -368,7 +368,7 @@
         "type": "radio",
         "weight": 15,
         "condition": 100,
-        "chargetaken": 0.5,
+        "chargetaken": 2,
         "freqmin": 88,
         "freqmax": 108,
         "way": "recv",
@@ -379,7 +379,7 @@
         "type": "radio",
         "weight": 17.5,
         "condition": 100,
-        "chargetaken": 0.75,
+        "chargetaken": 3,
         "freqmin": 88,
         "freqmax": 108,
         "way": "recv",
@@ -390,7 +390,7 @@
         "type": "radio",
         "weight": 20,
         "condition": 150,
-        "chargetaken": 1,
+        "chargetaken": 5,
         "freqmin": 26,
         "freqmax": 27.5,
         "way": "two",
@@ -401,7 +401,7 @@
         "type": "radio",
         "weight": 30,
         "condition": 400,
-        "chargetaken": 1.5,
+        "chargetaken": 7.5,
         "freqmin": 26,
         "freqmax": 108,
         "way": "two",

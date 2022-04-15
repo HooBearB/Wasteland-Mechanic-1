@@ -93,7 +93,7 @@
         "temp": 225
     },
     "performance_rad": {
-        "name": "Regular radiator",
+        "name": "Performance radiator",
         "type": "radiator",
         "weight": 10,
         "condition": 180,
@@ -206,7 +206,7 @@
     },
 
 
-    
+
     "reg_susp": {
         "name": "Regular suspension",
         "type": "suspension",

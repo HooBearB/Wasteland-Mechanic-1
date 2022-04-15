@@ -205,6 +205,8 @@
         "shiftspeed": 0.75
     },
 
+
+    
     "reg_susp": {
         "name": "Regular suspension",
         "type": "suspension",
@@ -362,6 +364,8 @@
         "chargetaken": 1,
         "illumination": 25
     },
+
+
 
     "commuter_radio": {
         "name": "Commuter radio",

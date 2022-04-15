@@ -26,12 +26,16 @@ def loadCar(car, carJSON, itemJSON):
     object["suspension"] = []
     while len(object["suspension"]) < carJSON[car]["numHubs"]:
         object["suspension"].append(carJSON[car]["suspension"])
+    object["suspensionHealth"] = []
+    while len(object["suspensionHealth"]) < carJSON[car]["numHubs"]:
+        object["suspensionHealth"].append(itemJSON[carJSON[car]["suspension"]]["condition"])
 
     object["tires"] = []
     while len(object["tires"]) < carJSON[car]["numHubs"]:
         object["tires"].append(carJSON[car]["tires"])
-    while len(object["frontlightsHealth"]) < carJSON[car]["numFrontLights"]:
-        object["frontlightsHealth"].append(itemJSON[carJSON[car]["headlights"]]["condition"])
+    object["tireHealth"] = []
+    while len(object["tireHealth"]) < carJSON[car]["numHubs"]:
+        object["tireHealth"].append(itemJSON[carJSON[car]["tires"]]["condition"])
 
     object["frontlights"] = []
     while len(object["frontlights"]) < carJSON[car]["numFrontLights"]:

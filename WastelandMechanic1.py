@@ -160,7 +160,7 @@ def startGame():
 			thirst = 100
 			health = 100
 		class currentCar:
-			id = "1998eco"
+			id = "cav_alm1"
 
 		gameLoop()
 	if decision == 2:

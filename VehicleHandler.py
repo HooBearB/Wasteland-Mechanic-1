@@ -55,3 +55,22 @@ def loadCar(car, carJSON, itemJSON):
     object["radioHealth"] = itemJSON[carJSON[car]["radio"]]["condition"]
     
     return object
+
+def displayVehicle(car, itemJSON):
+    print(car["name"])
+    x = 0
+    while x < len(car["display"]):
+        print(car["display"][x])
+        x = x + 1
+    print()
+    print("    Engine: " + itemJSON[car["engine"]]["name"])
+    print("    Radiator: " + itemJSON[car["radiator"]]["name"])
+    print("    Transmission: " + itemJSON[car["transmission"]]["name"])
+    print("    Battery: " + itemJSON[car["engine"]]["name"])
+    print()
+    x = 0
+    while x < len(car["tires"]):
+        print("    Tire " + str(x) + ": " + itemJSON[car["tires"][x]]["name"])
+    x = 0
+    while x < len(car["suspension"]):
+        print("    Suspension spring " + str(x) + ": " + itemJSON[car["suspension"][x]]["name"])

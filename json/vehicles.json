@@ -41,6 +41,8 @@
         "seats": 2,
         "cargo": 40,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 1500
     },
 
@@ -80,6 +82,8 @@
         "seats": 4,
         "cargo": 20,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 1800
     },
 
@@ -120,6 +124,8 @@
         "seats": 5,
         "cargo": 20,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 2350
     },
 
@@ -160,6 +166,8 @@
         "seats": 5,
         "cargo": 20,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 1100
     },
 
@@ -200,6 +208,8 @@
         "seats": 5,
         "cargo": 40,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 1200
     },
 
@@ -240,6 +250,8 @@
         "seats": 4,
         "cargo": 20,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 1900
     },
 
@@ -280,6 +292,8 @@
         "seats": 7,
         "cargo": 20,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3800
     },
 
@@ -320,6 +334,8 @@
         "seats": 7,
         "cargo": 30,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4000
     },
 
@@ -360,6 +376,8 @@
         "seats": 7,
         "cargo": 30,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4100
     },
 
@@ -400,6 +418,8 @@
         "seats": 2,
         "cargo": 30,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3000
     },
 
@@ -440,6 +460,8 @@
         "seats": 2,
         "cargo": 30,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 2900
     },
 
@@ -480,6 +502,8 @@
         "seats": 4,
         "cargo": 25,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3300
     },
 
@@ -521,6 +545,8 @@
         "seats": 3,
         "cargo": 80,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3800
     },
 
@@ -562,6 +588,8 @@
         "seats": 3,
         "cargo": 100,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4300
     },
 
@@ -603,6 +631,8 @@
         "seats": 2,
         "cargo": 100,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4625
     },
 
@@ -644,6 +674,8 @@
         "seats": 2,
         "cargo": 110,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 5550
     },
 
@@ -685,6 +717,8 @@
         "seats": 2,
         "cargo": 110,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4675
     },
 
@@ -727,6 +761,8 @@
         "seats": 2,
         "cargo": 110,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4875
     },
 
@@ -768,6 +804,8 @@
         "seats": 2,
         "cargo": 110,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4750
     },
 
@@ -808,6 +846,8 @@
         "seats": 2,
         "cargo": 130,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4800
     },
 
@@ -848,6 +888,8 @@
         "seats": 2,
         "cargo": 120,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4775
     },
 
@@ -888,6 +930,8 @@
         "seats": 3,
         "cargo": 100,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 4900
     },
 
@@ -927,6 +971,8 @@
         "seats": 2,
         "cargo": 40,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3200
     },
 
@@ -966,6 +1012,8 @@
         "seats": 2,
         "cargo": 45,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3500
     },
 
@@ -1005,8 +1053,11 @@
         "seats": 4,
         "cargo": 45,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3500
     },
+
     "high_wresrang": {
         "name": "2007 Highlander Wrestler Ranger",
         "blueprint": {
@@ -1043,6 +1094,50 @@
         "seats": 4,
         "cargo": 45,
         "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
+        "weight": 3200
+    },
+
+    "whir_m1": {
+        "name": "1992 WhiR m1",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│└─┘└─┘│",
+            "line6": "├┬────┬┤",
+            "line7": "║│┆┆┆┆│║",
+            "line8": "└┴────┴┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "├┬────┬┤", "║│┆┆┆┆│║", "└┴────┴┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": "     ______     ",
+            "line3": " ___/|_|__||__  ",
+            "line2": "|  _ `  `  _  |]",
+            "line1": "\\-(_)-----(_)-/ "
+        },
+        "sidedisplay": ["     ______     ", " ___/|_|__||__  ", "|  _ `  `  _  |]", "\\-(_)-----(_)-/ "],
+
+        "engine": "sport_eng",
+        "fuel_tank": "reg_tank",
+        "radiator": "performance_rad",
+        "battery": "high_bat",
+        "transmission": "sport_auto_trans",
+        "suspension": "offroad_susp",
+        "tires": "offroad_tire",
+        "headlights": "xenon_headlamp",
+        "taillights": "led_taillight",
+        "radio": "commuter_radio",
+
+        "seats": 4,
+        "cargo": 45,
+        "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
         "weight": 3200
     }
 }

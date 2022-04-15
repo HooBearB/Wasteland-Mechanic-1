@@ -36,6 +36,8 @@ import MOOSERecoded as moose
 import GUIAnimations as animations
 #Map generation and calling is stored in MapHandler.py
 import MapHandler as maps
+#Vehicle menus and handling can be found in VehicleHandler.py
+import VehicleHandler as vehicle
 #Inventory handling and management is stored in InventoryHandler.py
 import InventoryHandler as inv
 #Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
@@ -123,6 +125,10 @@ def startGame():
 		except:
 			direct = "choice"
 		try:
+			scenCar = loadedScenario["vehicle"]
+		except:
+			scenCar = "cav_alm1"
+		try:
 			foodrate = loadedScenario["food"]
 		except:
 			foodrate = 1
@@ -159,9 +165,8 @@ def startGame():
 			hunger = 100
 			thirst = 100
 			health = 100
-		class currentCar:
-			id = "cav_alm1"
-
+		currentCar = vehicle.loadCar(scenCar, vehicles, items)
+		vehicle.displayVehicle(currentCar, items)
 		gameLoop()
 	if decision == 2:
 		print(moose.format.clear)

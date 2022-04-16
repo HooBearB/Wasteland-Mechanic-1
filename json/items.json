@@ -228,6 +228,13 @@
         "condition": 100,
         "damageresist": 0.75
     },
+    "sport_susp": {
+        "name": "Sport suspension",
+        "type": "suspension",
+        "weight": 5,
+        "condition": 150,
+        "damageresist": 0.5
+    },
     "heavy_susp": {
         "name": "Heavy-duty suspension",
         "type": "suspension",

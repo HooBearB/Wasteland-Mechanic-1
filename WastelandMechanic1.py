@@ -120,34 +120,13 @@ def startGame():
 	time.sleep(0.5)
 	decision = moose.askOption("", ["Start game", "Back to scenario selection"])
 	if decision == 1:
-		try:
-			direct = loadedScenario["director"]
-		except:
-			direct = "choice"
-		try:
-			scenCar = loadedScenario["vehicle"]
-		except:
-			scenCar = "cav_alm1"
-		try:
-			foodrate = loadedScenario["food"]
-		except:
-			foodrate = 1
-		try:
-			waterrate = loadedScenario["water"]
-		except:
-			waterrate = 1
-		try:
-			twinkierate = loadedScenario["twinkies"]
-		except:
-			twinkierate = 1
-		try:
-			radchange = loadedScenario["rad_change"]
-		except:
-			radchange = 1
-		try:
-			banditchange = loadedScenario["bandits"]
-		except:
-			banditchange = 1
+		direct = jason.tryGrab(loadedScenario, "director", "choice")
+		scencar = jason.tryGrab(loadedScenario, "vehicle", "cav_alm1")
+		foodrate = jason.tryGrab(loadedScenario, "food", 1)
+		waterrate = jason.tryGrab(loadedScenario, "water", 1)
+		twinkierate = jason.tryGrab(loadedScenario, "twinkies", 1)
+		radchange = jason.tryGrab(loadedScenario, "rad_change", 1)
+		banditchange = jason.tryGrab(loadedScenario, "bandits", 1)
 
 		class gameData:
 			director = direct
@@ -165,8 +144,8 @@ def startGame():
 			hunger = 100
 			thirst = 100
 			health = 100
-		currentCar = vehicle.loadCar(scenCar, vehicles, items)
-		vehicle.displayVehicle(currentCar, items)
+		currentcar = vehicle.loadCar(scencar, vehicles, items)
+		vehicle.displayVehicle(currentcar, items)
 		gameLoop()
 	if decision == 2:
 		print(moose.format.clear)

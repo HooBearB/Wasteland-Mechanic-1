@@ -16,3 +16,10 @@ def openFile(file):
         items = "None"
     #Returns JSON content within file
     return items
+
+def tryGrab(root, find, setTo):
+    try:
+        x = root[find]
+    except:
+        x = setTo
+    return x

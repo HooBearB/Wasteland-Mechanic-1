@@ -1,5 +1,5 @@
 {
-    "usable": ["postapoc", "ut", "2007", "chal:alr", "chal:fam", "chal:dgw"],
+    "usable": ["postapoc", "2007", "ut", "ag", "chal:alr", "chal:fam", "chal:dgw"],
 
     "postapoc": {
         "name": "Post-apocalypse",
@@ -11,6 +11,20 @@
         "objective": "Cleveland, Ohio",
         "arrival": "cleveland_arrival",
         "journeylength": 500
+    },
+    "2007": {
+        "name": "2007",
+        "description": ["It's 2007, and the bombs dropped exactly 2 weeks ago.", "Find your way to Tennessee or die trying."],
+        "year": 2007,
+        "month": 2,
+        "day": 6,
+        "start_location": "Midland, Texas",
+        "objective": "Middleton, Tennessee",
+        "arrival": "tn_arrival",
+        "journeylength": 500,
+
+        "rad_change": 3,
+        "bandits": 2
     },
     "ut": {
         "name": "Undead territory",
@@ -27,19 +41,18 @@
         "bandits": 1.5,
         "twinkies": 0.05
     },
-    "2007": {
-        "name": "2007",
-        "description": ["It's 2007, and the bombs dropped exactly 2 weeks ago.", "Find your way to Tennessee or die trying."],
-        "year": 2007,
-        "month": 2,
+    "ag": {
+        "name": "Abandoned Gun",
+        "description": ["The original Wasteland Mechanic story.", "Journey to Seattle to find a safe place to settle down."],
+        "year": 2013,
+        "month": 7,
         "day": 6,
-        "start_location": "Midland, Texas",
-        "objective": "Middleton, Tennessee",
-        "arrival": "tn_arrival",
+        "start_location": "Middleton, Tennessee",
+        "objective": "Cleveland, Ohio",
+        "arrival": "cleveland_arrival",
         "journeylength": 500,
 
-        "rad_change": 3,
-        "bandits": 2
+        "vehicle": "whir_m1"
     },
     "chal:alr": {
         "name": "Challenge: A Long Road",

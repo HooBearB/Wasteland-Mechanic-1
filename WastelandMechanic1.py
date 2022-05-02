@@ -144,8 +144,7 @@ def startGame():
 			hunger = 100
 			thirst = 100
 			health = 100
-		currentcar = vehicle.loadCar(scencar, vehicles, items)
-		vehicle.displayVehicle(currentcar, items)
+		currentCar = vehicle.loadCar(scencar, vehicles, items)
 		gameLoop()
 	if decision == 2:
 		print(moose.format.clear)
@@ -161,7 +160,15 @@ def gameLoop():
 		map = maps.revealGen(map, position, maps.director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
 		displayMap = maps.formatMap(map, position, locations)
 		moose.scrollingText(displayMap[position:position + 20])
-		decision = moose.askOption(str(gameTime.month) + "/" + str(gameTime.day) + "/" + str(gameTime.year), ["Start driving"])
+		decision = moose.askOption(str(gameTime.month) + "/" + str(gameTime.day) + "/" + str(gameTime.year), ["Start driving", "Open vehicle menu"])
+		if decision == 1:
+			drive()
+		if decision == 2:
+			print(moose.format.clear)
+			vehicle.displayVehicle(currentCar, items)
+			decision = moose.askOption("", ["Modify vehicle", "Exit vehicle menu"])
+			if decision == 1:
+				vehicle.modifyVehicle(currentCar)
 
 
 

@@ -70,7 +70,9 @@ def displayVehicle(car, itemJSON):
     print()
     x = 0
     while x < len(car["tires"]):
-        print("    Tire " + str(x) + ": " + itemJSON[car["tires"][x]]["name"])
+        print("    Tire " + str(x + 1) + ": " + itemJSON[car["tires"][x]]["name"])
+        x = x + 1
     x = 0
     while x < len(car["suspension"]):
         print("    Suspension spring " + str(x) + ": " + itemJSON[car["suspension"][x]]["name"])
+        x = x + 1

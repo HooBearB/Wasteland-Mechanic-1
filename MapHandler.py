@@ -1,5 +1,4 @@
 import random
-import MOOSERecoded as moose
 
 def startGen(leng):
     #Starts map list
@@ -18,7 +17,7 @@ def startGen(leng):
 def revealGen(mapGen, curPos, places, range = 2):
     map = mapGen
     #Sets the minimum limit for map generation
-    x = curPos - range
+    x = curPos
     #Sets maximum limit of map generation to be the end of loop
     while x < curPos + range:
         #Checks to see if tile is mapped

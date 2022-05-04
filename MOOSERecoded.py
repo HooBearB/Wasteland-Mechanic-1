@@ -215,7 +215,7 @@ def listOption(message, options, indent = 2, delay = 0, lookingFor = -1):
 #   min: Lower limit of range, must be less than max, if given (Integer, default "N/A" to prevent usage) 
 #   max: Upper limit of range, must be greater than min, if given (Integer, default "N/A" to prevent usage)
 #   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
-def askOpen(message, min = "N/A", max = "N/A", indent = 2):
+def askOpen(message, min = -99999999999999999, max = 99999999999999999, indent = 2):
     run = 0
     while run < indent:
         print(" ", end = "")

@@ -122,7 +122,6 @@ def startGame():
 		time.sleep(0.5)
 		decision = moose.askOption("", ["Start game", "Back to scenario selection"])
 		if decision == 1:
-
 			class gameData:
 				scenCar = loadedScenario["gamedata"]["vehicle"]
 				director = loadedScenario["gamedata"]["director"]
@@ -146,7 +145,42 @@ def startGame():
 			print(moose.format.clear)
 			startGame()
 	else:
-		
+		class gameData:
+			scenCar = "cav_alm1"
+			director = "choice"
+			food = 1
+			water = 1
+			twinkies = 1
+			radiation = 1
+			bandits = 1
+			end = 500
+		menus = ["Distance", "Starting vehicle", "Start game"]
+		x = 0
+		while menus[x] != "Exit":
+			if menus[x] != "Exit":
+				print(moose.format.clear)
+				y = 0
+				print("  ", end = "| ")
+				while y < len(menus):
+					if y == x:
+						print(moose.format.bold, end = "")
+					print(menus[y], end = "")
+					print(moose.format.end, end = " | ")
+					y = y + 1
+				print()
+				if menus[x] == "Distance":
+					print("  Current distance: " + str(gameData.end))
+				decision = moose.askString("Press enter to edit a variable, and use the [ ] keys to switch menus.")
+				if decision == "[" and x - 1 >= 0:
+					x = x - 1
+				if decision == "]" and x + 1 <= len(menus) - 1:
+					x = x + 1
+				if decision != "[" and decision != "]":
+					if menus[x] == "Distance":
+						gameData.end = moose.askOpen("Set distance for the journey: ", min = 0)
+					if menus[x] == "Starting vehicle":
+						gameData.scenCar = moose.askOption("Select vehicle")
+		startGame()
 
 def gameLoop():
 	global map

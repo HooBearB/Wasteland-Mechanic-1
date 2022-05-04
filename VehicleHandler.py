@@ -53,6 +53,8 @@ def loadCar(car, carJSON, itemJSON):
 
     object["radio"] = carJSON[car]["radio"]
     object["radioHealth"] = itemJSON[carJSON[car]["radio"]]["condition"]
+
+    object["weight"] = carJSON[car]["weight"]
     
     return object
 
@@ -74,5 +76,8 @@ def displayVehicle(car, itemJSON):
         x = x + 1
     x = 0
     while x < len(car["suspension"]):
-        print("    Suspension spring " + str(x) + ": " + itemJSON[car["suspension"][x]]["name"])
+        print("    Suspension spring " + str(x + 1) + ": " + itemJSON[car["suspension"][x]]["name"])
         x = x + 1
+
+def determineMaxSpeed(hp, weight):
+    return round((300 * hp ** (1/3)) / (weight ** (1/3)), 0)

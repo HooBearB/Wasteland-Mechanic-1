@@ -102,53 +102,51 @@ def startGame():
 	while x < len(scenarioList):
 		scenarioDisp.append(scenarios[scenarioList[x]]["name"])
 		x = x + 1
+	scenarioDisp.append("Custom")
 	decision = moose.askOption("Choose a scenario:", scenarioDisp)
-	chosenScenario = scenarioList[decision - 1]
-	loadedScenario = scenarios[chosenScenario]
-	print(moose.format.clear)
-	moose.scrollingText(moose.format.bold + loadedScenario["name"] + moose.format.end)
-	time.sleep(0.5)
-	x = 0
-	while x < len(loadedScenario["description"]):
-		moose.scrollingText(loadedScenario["description"][x])
-		time.sleep(0.75)
-		x = x + 1
-	time.sleep(0.5)
-	print()
-	print("   Start date: " + str(loadedScenario["month"]) + "/" + str(loadedScenario["day"]) + "/" + str(loadedScenario["year"]))
-	print("  Trip length: " + str(loadedScenario["journeylength"]))
-	time.sleep(0.5)
-	decision = moose.askOption("", ["Start game", "Back to scenario selection"])
-	if decision == 1:
-		direct = jason.tryGrab(loadedScenario, "director", "choice")
-		scencar = jason.tryGrab(loadedScenario, "vehicle", "cav_alm1")
-		foodrate = jason.tryGrab(loadedScenario, "food", 1)
-		waterrate = jason.tryGrab(loadedScenario, "water", 1)
-		twinkierate = jason.tryGrab(loadedScenario, "twinkies", 1)
-		radchange = jason.tryGrab(loadedScenario, "rad_change", 1)
-		banditchange = jason.tryGrab(loadedScenario, "bandits", 1)
-
-		class gameData:
-			director = direct
-			food = 1 * foodrate
-			water = 1 * waterrate
-			twinkies = 1 * twinkierate
-			radiation = 1 * radchange
-			bandits = 1 * banditchange
-			end = loadedScenario["journeylength"]
-		class gameTime:
-			month = loadedScenario["month"]
-			day = loadedScenario["day"]
-			year = loadedScenario["year"]
-		class character:
-			hunger = 100
-			thirst = 100
-			health = 100
-		currentCar = vehicle.loadCar(scencar, vehicles, items)
-		gameLoop()
-	if decision == 2:
+	if scenarioDisp[decision - 1] != "Custom":
+		chosenScenario = scenarioList[decision - 1]
+		loadedScenario = scenarios[chosenScenario]
 		print(moose.format.clear)
-		startGame()
+		moose.scrollingText(moose.format.bold + loadedScenario["name"] + moose.format.end)
+		time.sleep(0.5)
+		x = 0
+		while x < len(loadedScenario["description"]):
+			moose.scrollingText(loadedScenario["description"][x])
+			time.sleep(0.75)
+			x = x + 1
+		time.sleep(0.5)
+		print()
+		print("   Start date: " + str(loadedScenario["month"]) + "/" + str(loadedScenario["day"]) + "/" + str(loadedScenario["year"]))
+		print("  Trip length: " + str(loadedScenario["journeylength"]))
+		time.sleep(0.5)
+		decision = moose.askOption("", ["Start game", "Back to scenario selection"])
+		if decision == 1:
+
+			class gameData:
+				scenCar = loadedScenario["gamedata"]["vehicle"]
+				director = loadedScenario["gamedata"]["director"]
+				food = loadedScenario["gamedata"]["food"]
+				water = loadedScenario["gamedata"]["water"]
+				twinkies = loadedScenario["gamedata"]["twinkies"]
+				radiation = loadedScenario["gamedata"]["radiation"]
+				bandits = loadedScenario["gamedata"]["bandits"]
+				end = loadedScenario["journeylength"]
+			class gameTime:
+				month = loadedScenario["month"]
+				day = loadedScenario["day"]
+				year = loadedScenario["year"]
+			class character:
+				hunger = 100
+				thirst = 100
+				health = 100
+			currentCar = vehicle.loadCar(gameData.scenCar, vehicles, items)
+			gameLoop()
+		if decision == 2:
+			print(moose.format.clear)
+			startGame()
+	else:
+		
 
 def gameLoop():
 	global map
@@ -162,7 +160,8 @@ def gameLoop():
 		moose.scrollingText(displayMap[position:position + 20])
 		decision = moose.askOption(str(gameTime.month) + "/" + str(gameTime.day) + "/" + str(gameTime.year), ["Start driving", "Open vehicle menu"])
 		if decision == 1:
-			drive()
+			print()
+			maps.drive(vehicle.determineMaxSpeed(items[currentCar["engine"]]["hp"], currentCar["weight"]))
 		if decision == 2:
 			print(moose.format.clear)
 			vehicle.displayVehicle(currentCar, items)

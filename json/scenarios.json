@@ -10,8 +10,19 @@
         "start_location": "Middleton, Tennessee",
         "objective": "Cleveland, Ohio",
         "arrival": "cleveland_arrival",
-        "journeylength": 500
+        "journeylength": 500,
+
+        "gamedata": {
+            "vehicle": "cav_alm1",
+            "director": "choice",
+            "food": 1,
+            "water": 1,
+            "twinkies": 1,
+            "radiation": 1,
+            "bandits": 1
+        }
     },
+
     "2007": {
         "name": "2007",
         "description": ["It's 2007, and the bombs dropped exactly 2 weeks ago.", "Find your way to Tennessee or die trying."],
@@ -23,8 +34,15 @@
         "arrival": "tn_arrival",
         "journeylength": 500,
 
-        "rad_change": 3,
-        "bandits": 2
+        "gamedata": {
+            "vehicle": "cav_alm1",
+            "director": "choice",
+            "food": 1,
+            "water": 1,
+            "twinkies": 1,
+            "radiation": 3,
+            "bandits": 2
+        }
     },
     "ut": {
         "name": "Undead territory",
@@ -37,9 +55,15 @@
         "arrival": "amusement_arrival",
         "journeylength": 1250,
 
-        "rad_change": 0.5,
-        "bandits": 1.5,
-        "twinkies": 0.05
+        "gamedata": {
+            "vehicle": "whir_m2",
+            "director": "choice",
+            "food": 1,
+            "water": 1,
+            "twinkies": 0.05,
+            "radiation": 0.5,
+            "bandits": 1.5
+        }
     },
     "ag": {
         "name": "Lost Gun",
@@ -52,7 +76,15 @@
         "arrival": "cleveland_arrival",
         "journeylength": 500,
 
-        "vehicle": "whir_m1"
+        "gamedata": {
+            "vehicle": "whir_m1",
+            "director": "choice",
+            "food": 1,
+            "water": 1,
+            "twinkies": 1,
+            "radiation": 1,
+            "bandits": 1
+        }
     },
     "chal:alr": {
         "name": "Challenge: A Long Road",
@@ -65,8 +97,15 @@
         "arrival": "cleveland_arrival",
         "journeylength": 2000,
 
-        "food": 1.1,
-        "water": 1.1
+        "gamedata": {
+            "vehicle": "cav_alm1",
+            "director": "choice",
+            "food": 1.1,
+            "water": 1.1,
+            "twinkies": 1,
+            "radiation": 1,
+            "bandits": 2
+        }
     },
     "chal:fam": {
         "name": "Challenge: Famine",
@@ -79,8 +118,15 @@
         "arrival": "cleveland_arrival",
         "journeylength": 2000,
 
-        "food": 0.25,
-        "water": 0.75
+        "gamedata": {
+            "vehicle": "cav_alm1",
+            "director": "choice",
+            "food": 0.25,
+            "water": 0.75,
+            "twinkies": 1,
+            "radiation": 1,
+            "bandits": 1
+        }
     },
     "chal:dgw": {
         "name": "Challenge: Deal Gone Wrong",
@@ -93,6 +139,14 @@
         "arrival": "cleveland_arrival",
         "journeylength": 750,
 
-        "bandits": 4
+        "gamedata": {
+            "vehicle": "cav_alm1",
+            "director": "choice",
+            "food": 1,
+            "water": 1,
+            "twinkies": 1,
+            "radiation": 1,
+            "bandits": 4
+        }
     }
 }

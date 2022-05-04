@@ -1,4 +1,5 @@
 import random
+import MOOSERecoded as moose
 
 def startGen(leng):
     #Starts map list
@@ -14,7 +15,7 @@ def startGen(leng):
     mapGen.append("objective")
     return mapGen
 
-def revealGen(mapGen, curPos, places, range = 2):
+def revealGen(mapGen, curPos, places, range = 5):
     map = mapGen
     #Sets the minimum limit for map generation
     x = curPos
@@ -22,8 +23,8 @@ def revealGen(mapGen, curPos, places, range = 2):
     while x < curPos + range:
         #Checks to see if tile is mapped
         if map[x] == "unmapped":
-            x = random.randint(0, 100)
-            if x < 80:
+            slot = random.randint(0, 100)
+            if slot < 80:
                 #80% chance to become a plain travelable tile
                 map[x] = "road"
             else:
@@ -94,3 +95,6 @@ def director(mode, needs, number, buildings, locationData):
             findPlace = random.choice(buildings)
         places.append(findPlace)
     return places
+
+def drive(maxSpeed):
+    moose.askOption("Select a speed:\n", ["Low speed\n    (" + str(round(maxSpeed/4)) + " mph drive, least damage to parts)\n", "Medium speed\n    (" + str(round(maxSpeed/2)) + " mph drive, best fuel economy)\n", "High speed\n    (" + str(round(maxSpeed)) + " mph drive, best speed)\n"])

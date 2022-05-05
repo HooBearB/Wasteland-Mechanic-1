@@ -154,33 +154,50 @@ def startGame():
 			radiation = 1
 			bandits = 1
 			end = 500
+		class gameTime:
+			month = 7
+			day = 6
+			year = 2013
+		class character:
+			hunger = 100
+			thirst = 100
+			health = 100
 		menus = ["Distance", "Starting vehicle", "Start game"]
 		x = 0
-		while menus[x] != "Exit":
-			if menus[x] != "Exit":
-				print(moose.format.clear)
-				y = 0
-				print("  ", end = "| ")
-				while y < len(menus):
-					if y == x:
-						print(moose.format.bold, end = "")
-					print(menus[y], end = "")
-					print(moose.format.end, end = " | ")
-					y = y + 1
-				print()
+		while menus[x] != "Start game":
+			print(moose.format.clear)
+			y = 0
+			print("  ", end = "| ")
+			while y < len(menus):
+				if y == x:
+					print(moose.format.bold, end = "")
+				print(menus[y], end = "")
+				print(moose.format.end, end = " | ")
+				y = y + 1
+			print()
+			if menus[x] == "Distance":
+				print("  Current distance: " + str(gameData.end))
+			if menus[x] == "Starting vehicle":
+				print("  Current vehicle: " + vehicles[gameData.scenCar]["name"])
+			decision = moose.askString("Press enter to edit a variable, and use \"[\" and \"]\" keys to switch menus.")
+			if decision == "[" and x - 1 >= 0:
+				x = x - 1
+			if decision == "]" and x + 1 <= len(menus) - 1:
+				x = x + 1
+			if decision != "[" and decision != "]":
 				if menus[x] == "Distance":
-					print("  Current distance: " + str(gameData.end))
-				decision = moose.askString("Press enter to edit a variable, and use the [ ] keys to switch menus.")
-				if decision == "[" and x - 1 >= 0:
-					x = x - 1
-				if decision == "]" and x + 1 <= len(menus) - 1:
-					x = x + 1
-				if decision != "[" and decision != "]":
-					if menus[x] == "Distance":
-						gameData.end = moose.askOpen("Set distance for the journey: ", min = 0)
-					if menus[x] == "Starting vehicle":
-						gameData.scenCar = moose.askOption("Select vehicle")
-		startGame()
+					gameData.end = moose.askOpen("Set distance for the journey: ", min = 0)
+				if menus[x] == "Starting vehicle":
+					displayVehicles = []
+					y = 0
+					while y < len(vehicles["list"]):
+						displayVehicles.append(vehicles[vehicles["list"][y]]["name"])
+						y = y + 1
+					decision = moose.askOption("Select vehicle", displayVehicles)
+					gameData.scenCar = vehicles["list"][decision - 1]
+		currentCar = vehicle.loadCar(gameData.scenCar, vehicles, items)
+		print(moose.format.clear)
+		gameLoop()
 
 def gameLoop():
 	global map

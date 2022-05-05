@@ -58,7 +58,7 @@
         "lootmax": [3, 3],
         "haspump": false,
         "npc": 15,
-        "npctype": ["relig", "merch", "res"]
+        "npctype": ["merch", "res"]
     },
 
     "grocery": {

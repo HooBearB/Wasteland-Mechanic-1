@@ -3,7 +3,7 @@
              "cav_omeg", "cav_cap1", "cav_cap2", "cav_cap3", "cav_sat1", "cav_sat2", 
              "cav_gem", "cav_ms1", "cav_ms2", "cav_ms3", "cav_ms4", "cav_ms5", "cav_ms6",
              "cav_msss", "cav_cs1", "cav_cs2", "cav_cs3", "high_wres1", "high_wres2", 
-             "high_wres3", "high_wresrang", "whir_m1", "whir_m2"],
+             "high_wres3", "high_wresrang", "whir_m1", "whir_m2", "whir_fr1", "whir_fr2", "whir_fr3"],
 
     "cav_alm1": {
         "name": "1986 Cavice Almida",
@@ -1153,7 +1153,7 @@
             "line7": "│      │",
             "line8": "└──────┘"
         },
-        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└────┘│", "│└────┘│", "│      │", "└──────┘"],
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│└─┘└─┘│", "│└─┘└─┘│", "│      │", "└──────┘"],
 
         "sideblueprint": {
             "scale": "1-2-3-4-5-6-7-8-",
@@ -1181,5 +1181,131 @@
         "numFrontLights": 2,
         "numBackLights": 2,
         "weight": 6600
+    },
+
+    "whir_fr1": {
+        "name": "1969 WhiR Fieldrunner",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│      │",
+            "line6": "│└────┘│",
+            "line7": "│      │",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│      │", "│└────┘│", "│      │", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "/|__|__|___\\___ ",
+            "line2": "|  _ `  `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "/|__|__|___\\___ ", "|  _ `  `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg_eng",
+        "fuel_tank": "reg_tank",
+        "radiator": "heavy_rad",
+        "battery": "reg_bat",
+        "transmission": "reg_auto_trans",
+        "suspension": "offroad_susp",
+        "tires": "reg_tire",
+        "headlights": "reg_headlamp",
+        "taillights": "reg_taillight",
+        "radio": "commuter_radio",
+
+        "seats": 5,
+        "cargo": 40,
+        "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
+        "weight": 4200
+    },
+
+    "whir_fr2": {
+        "name": "1994 WhiR Fieldrunner",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│      │",
+            "line6": "│└─┘└─┘│",
+            "line7": "│      │",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│      │", "│└─┘└─┘│", "│      │", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "//__|__|___\\___ ",
+            "line2": "|  _ `  `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "//__|__|___\\___ ", "|  _ `  `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "reg_eng",
+        "fuel_tank": "reg_tank",
+        "radiator": "heavy_rad",
+        "battery": "reg_bat",
+        "transmission": "reg_auto_trans",
+        "suspension": "reg_susp",
+        "tires": "reg_tire",
+        "headlights": "reg_headlamp",
+        "taillights": "led_taillight",
+        "radio": "commuter_radio",
+
+        "seats": 4,
+        "cargo": 45,
+        "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
+        "weight": 4600
+    },
+
+    "whir_fr3": {
+        "name": "2001 WhiR Fieldrunner",
+        "blueprint": {
+            "line1": "┌──────┐",
+            "line2": "║      ║",
+            "line3": "├──────┤",
+            "line4": "│└─┘└─┘│",
+            "line5": "│      │",
+            "line6": "│└─┘└─┘│",
+            "line7": "│      │",
+            "line8": "└──────┘"
+        },
+        "display": ["┌──────┐", "║      ║", "├──────┤", "│└─┘└─┘│", "│      │", "│└─┘└─┘│", "│      │", "└──────┘"],
+
+        "sideblueprint": {
+            "scale": "1-2-3-4-5-6-7-8-",
+            "line4": " __________     ",
+            "line3": "/__/___|___\\___ ",
+            "line2": "|  _`   `   _  |",
+            "line1": "\\-(_)------(_)-/"
+        },
+        "sidedisplay": [" __________     ", "/__/___|___\\___ ", "|  _`   `   _  |", "\\-(_)------(_)-/"],
+
+        "engine": "tuned_eng",
+        "fuel_tank": "reg_tank",
+        "radiator": "performance_rad",
+        "battery": "high_bat",
+        "transmission": "reg_auto_trans",
+        "suspension": "reg_susp",
+        "tires": "reg_tire",
+        "headlights": "xenon_headlamp",
+        "taillights": "led_taillight",
+        "radio": "commuter_radio",
+
+        "seats": 4,
+        "cargo": 50,
+        "numHubs": 4,
+        "numFrontLights": 2,
+        "numBackLights": 2,
+        "weight": 4600
     }
 }

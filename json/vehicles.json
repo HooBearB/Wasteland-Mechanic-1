@@ -7,6 +7,7 @@
 
     "cav_alm1": {
         "name": "1986 Cavice Almida",
+        "type": "Economy hatchback",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -48,6 +49,7 @@
 
     "cav_alm2": {
         "name": "1993 Cavice Almida",
+        "type": "Economy hatchback",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -89,6 +91,7 @@
 
     "cav_trac1": {
         "name": "1991 Cavice Tracer",
+        "type": "Regular sedan",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -131,6 +134,7 @@
 
     "cav_trac2": {
         "name": "2003 Cavice Tracer",
+        "type": "Regular sedan",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -173,6 +177,7 @@
 
     "cav_trac3": {
         "name": "2003 Cavice Tracer Wagon",
+        "type": "Regular station wagon",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -215,6 +220,7 @@
 
     "cav_omeg": {
         "name": "1986 Cavice Omega II",
+        "type": "Regular sedan",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -257,6 +263,7 @@
 
     "cav_cap1": {
         "name": "1994 Cavice Capacity",
+        "type": "Regular minivan",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -299,6 +306,7 @@
 
     "cav_cap2": {
         "name": "1998 Cavice Capacity",
+        "type": "Regular minivan",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -341,6 +349,7 @@
 
     "cav_cap3": {
         "name": "2004 Cavice Capacity",
+        "type": "Modern minivan",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -367,11 +376,11 @@
         "radiator": "reg_rad",
         "battery": "reg_bat",
         "transmission": "reg_auto_trans",
-        "suspension": "reg",
-        "tires": "reg",
-        "headlights": "reg",
-        "taillights": "led",
-        "radio": "modern",
+        "suspension": "reg_susp",
+        "tires": "reg_tire",
+        "headlights": "reg_headlamp",
+        "taillights": "led_taillight",
+        "radio": "modern_radio",
 
         "seats": 7,
         "cargo": 30,
@@ -383,6 +392,7 @@
 
     "cav_sat1": {
         "name": "1988 Cavice Satellite",
+        "type": "Sport coupe",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -425,6 +435,7 @@
 
     "cav_sat2": {
         "name": "1993 Cavice Satellite",
+        "type": "Sport coupe",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -467,6 +478,7 @@
 
     "cav_gem": {
         "name": "1996 Cavice Gemini",
+        "type": "Modern sedan",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -497,7 +509,7 @@
         "tires": "reg_tire",
         "headlights": "reg_headlamp",
         "taillights": "led_taillight",
-        "radio": "commuter_radio",
+        "radio": "modern_radio",
 
         "seats": 4,
         "cargo": 25,
@@ -509,6 +521,7 @@
 
     "cav_ms1": {
         "name": "1980 Cavice M-7",
+        "type": "Regular pickup truck",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -552,6 +565,7 @@
 
     "cav_ms2": {
         "name": "1987 Cavice M-8",
+        "type": "Regular pickup truck",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -595,6 +609,7 @@
 
     "cav_ms3": {
         "name": "1992 Cavice M-9",
+        "type": "Regular pickup truck",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -638,6 +653,7 @@
 
     "cav_ms4": {
         "name": "1997 Cavice M-10",
+        "type": "Regular pickup truck",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -681,6 +697,7 @@
 
     "cav_ms5": {
         "name": "2004 Cavice M-11",
+        "type": "Modern pickup truck",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -712,7 +729,7 @@
         "tires": "offroad_tire",
         "headlights": "reg_headlamp",
         "taillights": "led_taillight",
-        "radio": "commuter_radio",
+        "radio": "modern_radio",
 
         "seats": 2,
         "cargo": 110,
@@ -724,6 +741,7 @@
 
     "cav_ms6": {
         "name": "2004 Cavice M-11 Rancher",
+        "type": "Modern pickup truck",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -756,7 +774,7 @@
         "tires": "offroad_tire",
         "headlights": "reg_headlamp",
         "taillights": "led_taillight",
-        "radio": "commuter_radio",
+        "radio": "modern_radio",
 
         "seats": 2,
         "cargo": 110,
@@ -768,6 +786,7 @@
 
     "cav_msss": {
         "name": "2004 Cavice M-11 Super Swamper",
+        "type": "Sport pickup truck",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║  ==  ║",
@@ -811,6 +830,7 @@
 
     "cav_cs1": {
         "name": "1975 Cavice C-3",
+        "type": "Economy van",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "╟──────╢",
@@ -832,9 +852,9 @@
         },
         "sidedisplay": [" ____________   ", "|         |__\\_ ", "|  _       `_  |", "\\-(_)------(_)-/"],
 
-        "engine": "reg_eng",
+        "engine": "econ_eng",
         "fuel_tank": "reg_tank",
-        "radiator": "reg_rad",
+        "radiator": "econ_rad",
         "battery": "econ_bat",
         "transmission": "reg_man_trans",
         "suspension": "reg_susp",
@@ -853,6 +873,7 @@
 
     "cav_cs2": {
         "name": "1992 Cavice C-4",
+        "type": "Regular van",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -895,6 +916,7 @@
 
     "cav_cs3": {
         "name": "1992 Cavice C-4 Ambulance",
+        "type": "Custom van",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -937,6 +959,7 @@
 
     "high_wres1": {
         "name": "1987 Highlander Wrestler",
+        "type": "Regular offroader",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -978,6 +1001,7 @@
 
     "high_wres2": {
         "name": "1996 Highlander Wrestler",
+        "type": "Regular offroader",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -1019,6 +1043,7 @@
 
     "high_wres3": {
         "name": "2007 Highlander Wrestler",
+        "type": "Modern offroader",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║      ║",
@@ -1060,6 +1085,7 @@
 
     "high_wresrang": {
         "name": "2007 Highlander Wrestler Ranger",
+        "type": "Sport offroader",
         "blueprint": {
             "line1": "╭──────╮",
             "line2": "║  ==  ║",
@@ -1101,6 +1127,7 @@
 
     "whir_m1": {
         "name": "1992 WhiR m1",
+        "type": "Regular offroader",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -1143,6 +1170,7 @@
 
     "whir_m2": {
         "name": "2002 WhiR m2",
+        "type": "Modern SUV",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -1185,6 +1213,7 @@
 
     "whir_fr1": {
         "name": "1969 WhiR Fieldrunner",
+        "type": "Regular offroader",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -1227,6 +1256,7 @@
 
     "whir_fr2": {
         "name": "1994 WhiR Fieldrunner",
+        "type": "Regular SUV",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",
@@ -1269,6 +1299,7 @@
 
     "whir_fr3": {
         "name": "2001 WhiR Fieldrunner",
+        "type": "Modern SUV",
         "blueprint": {
             "line1": "┌──────┐",
             "line2": "║      ║",

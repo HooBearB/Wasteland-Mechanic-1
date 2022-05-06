@@ -215,9 +215,10 @@ def gameLoop():
 			maps.drive(vehicle.determineMaxSpeed(items[currentCar["engine"]]["hp"], currentCar["weight"]))
 		if decision == 2:
 			print(moose.format.clear)
-			vehicle.displayVehicle(currentCar, items)
+			vehicle.displayGraphics(currentCar)
 			decision = moose.askOption("", ["Modify vehicle", "Exit vehicle menu"])
 			if decision == 1:
+				vehicle.displayVehicle(currentCar, items)
 				vehicle.modifyVehicle(currentCar)
 
 

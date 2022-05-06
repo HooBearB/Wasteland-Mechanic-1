@@ -5,6 +5,7 @@ def loadCar(car, carJSON, itemJSON):
     object = {}
     object["id"] = car
     object["name"] = carJSON[car]["name"]
+    object["type"] = carJSON[car]["type"]
     object["display"] = carJSON[car]["display"]
     object["sidedisplay"] = carJSON[car]["sidedisplay"]
 
@@ -58,8 +59,17 @@ def loadCar(car, carJSON, itemJSON):
     
     return object
 
+def displayGraphics(car):
+    print(moose.format.bold + car["name"] + moose.format.end)
+    print(car["type"])
+    x = 0
+    while x < len(car["display"]):
+        print(car["display"][x])
+        x = x + 1
+
 def displayVehicle(car, itemJSON):
-    print(car["name"])
+    print(moose.format.bold + car["name"] + moose.format.end)
+    print(car["type"])
     x = 0
     while x < len(car["display"]):
         print(car["display"][x])

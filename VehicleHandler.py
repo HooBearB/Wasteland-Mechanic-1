@@ -1,4 +1,5 @@
 import MOOSERecoded as moose
+import InventoryHandler as inv
 import random
 
 def loadCar(car, carJSON, itemJSON):
@@ -91,3 +92,27 @@ def displayVehicle(car, itemJSON):
 
 def determineMaxSpeed(hp, weight):
     return round((300 * hp ** (1/3)) / (weight ** (1/3)), 0)
+
+def modifyVehicle(currentCar, inventory, itemsJSON):
+    listMod = []
+    if inv.findType(inventory, "engine", itemsJSON):
+        listMod.append("Engine")
+    if inv.findType(inventory, "fueltank", itemsJSON):
+        listMod.append("Fuel tank")
+    if inv.findType(inventory, "radiator", itemsJSON):
+        listMod.append("Radiator")
+    if inv.findType(inventory, "battery", itemsJSON):
+        listMod.append("Battery")
+    if inv.findType(inventory, "transmission", itemsJSON):
+        listMod.append("Engine")
+    if inv.findType(inventory, "suspension", itemsJSON):
+        listMod.append("Suspension")
+    if inv.findType(inventory, "tire", itemsJSON):
+        listMod.append("Tires")
+    if inv.findType(inventory, "headlight", itemsJSON):
+        listMod.append("Headlights")
+    if inv.findType(inventory, "taillight", itemsJSON):
+        listMod.append("Taillights")
+    if inv.findType(inventory, "radio", itemsJSON):
+        listMod.append("Radio")
+    decision = moose.askOption(moose.format.bold + "Vehicle modification menu", listMod)

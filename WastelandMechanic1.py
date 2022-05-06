@@ -218,6 +218,7 @@ def gameLoop():
 			vehicle.displayGraphics(currentCar)
 			decision = moose.askOption("", ["Modify vehicle", "Exit vehicle menu"])
 			if decision == 1:
+				print(moose.format.clear)
 				vehicle.displayVehicle(currentCar, items)
 				vehicle.modifyVehicle(currentCar)
 

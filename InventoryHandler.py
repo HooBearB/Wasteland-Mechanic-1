@@ -23,3 +23,11 @@ def determineNeeds(hunger, thirst, characterHealth, carHealth = 100):
         needs.append("fw")
     if carHealth <= 75:
         needs.append("parts")
+
+def findType(inventory, type, itemsJSON):
+    x = 0
+    while x < len(inventory):
+        if itemsJSON[inventory[x]]["type"] == type:
+            return True
+        x = x + 1
+    return False

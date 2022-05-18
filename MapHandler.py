@@ -1,5 +1,6 @@
 import random
 import MOOSERecoded as moose
+import InventoryHandler as inv
 
 def startGen(leng):
     #Starts map list
@@ -96,5 +97,16 @@ def director(mode, needs, number, buildings, locationData):
         places.append(findPlace)
     return places
 
-def drive(maxSpeed):
-    moose.askOption("Select a speed:\n", ["Low speed\n    (" + str(round(maxSpeed/4)) + " mph drive, least damage to parts)\n", "Medium speed\n    (" + str(round(maxSpeed/2)) + " mph drive, best fuel economy)\n", "High speed\n    (" + str(round(maxSpeed)) + " mph drive, best speed)\n"])
+def drive(maxSpeed, character, locations, position, gameData):
+    choiceSpeed = moose.askOption("Select a speed:\n", ["Low speed\n    (" + str(round(maxSpeed/4)) + " mph drive, least damage to parts)\n", "Medium speed\n    (" + str(round(maxSpeed/2)) + " mph drive, best fuel economy)\n", "High speed\n    (" + str(round(maxSpeed)) + " mph drive, best speed)\n"])
+    print()
+    driveLength = moose.askOpen("Set trip length:", min = 1, max = 600)
+    tiles = (choiceSpeed * driveLength / 60)
+    x = 0
+    while x < tiles:
+        position = position + 1
+        newMap = revealGen(map, position, director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
+        displayMap = formatMap(newMap, position, locations)
+        moose.scrollingText(displayMap[position:position + 20])
+        x = x + 1
+    return position

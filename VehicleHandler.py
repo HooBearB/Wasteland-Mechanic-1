@@ -115,4 +115,5 @@ def modifyVehicle(currentCar, inventory, itemsJSON):
         listMod.append("Taillights")
     if inv.findType(inventory, "radio", itemsJSON):
         listMod.append("Radio")
+    displayVehicle(currentCar, itemsJSON)
     decision = moose.askOption(moose.format.bold + "Vehicle modification menu", listMod)

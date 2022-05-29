@@ -132,9 +132,12 @@ def startGame():
 				bandits = loadedScenario["gamedata"]["bandits"]
 				end = loadedScenario["journeylength"]
 			class gameTime:
-				month = loadedScenario["month"]
-				day = loadedScenario["day"]
-				year = loadedScenario["year"]
+				seconds = 0
+				minutes = random.randint(0, 59)
+				hours = random.randint(1, 12)
+				days = loadedScenario["day"]
+				months = loadedScenario["month"]
+				years = loadedScenario["year"]
 			class character:
 				hunger = 100
 				thirst = 100
@@ -155,9 +158,12 @@ def startGame():
 			bandits = 1
 			end = 500
 		class gameTime:
-			month = 7
-			day = 6
-			year = 2013
+			seconds = 0
+			minutes = random.randint(0, 59)
+			hours = random.randint(1, 12)
+			days = 6
+			months = 7
+			years = 2013
 		class character:
 			hunger = 100
 			thirst = 100
@@ -210,7 +216,7 @@ def gameLoop():
 		displayMap = maps.revealGen(map, position, maps.director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
 		displayMap = maps.formatMap(map, position, locations)
 		moose.scrollingText(displayMap[position:position + 20])
-		decision = moose.askOption(str(gameTime.month) + "/" + str(gameTime.day) + "/" + str(gameTime.year), ["Start driving", "Open vehicle menu"])
+		decision = moose.askOption(moose.timeKeeper.formatClockTime(gameTime), ["Start driving", "Open vehicle menu"])
 		if decision == 1:
 			print()
 			maps.drive(vehicle.determineMaxSpeed(items[currentCar["engine"]]["hp"], currentCar["weight"]), character, locations, position, gameData)

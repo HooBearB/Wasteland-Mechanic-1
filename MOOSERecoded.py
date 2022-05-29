@@ -346,3 +346,54 @@ def askString(message, indent = 2):
 def askToContinue():
     #Asks to continue, x is an unused variable
     x = input("  Press " + format.bold + "enter" + format.end + " to continue.   ")
+
+class timeKeeper:
+    def updateTime(currTime, addSeconds = 0, addMinutes = 0, addHours = 0, addDays = 0, addMonths = 0, addYears = 0):
+        currTime.seconds = currTime.seconds + addSeconds
+        currTime.minutes = currTime.minutes + addMinutes
+        currTime.hours = currTime.hours + addHours
+        currTime.days = currTime.days + addDays
+        currTime.months = currTime.months + addMonths
+        currTime.years = currTime.years + addYears
+
+        daysToMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+        while currTime.seconds >= 60:
+            currTime.minutes = currTime.minutes + 1
+            currTime.seconds = currTime.seconds - 60
+        while currTime.minutes >= 60:
+            currTime.hours = currTime.hours + 1
+            currTime.minutes = currTime.minutes - 60
+        while currTime.hours >= 24:
+            currTime.days = currTime.days + 1
+            currTime.hours = currTime.hours - 24
+        while currTime.days >= daysToMonth[currTime.months]:
+            currTime.months = currTime.months + 1
+            currTime.day = currTime.day - daysToMonth[currTime.months]
+        while currTime.months > 12:
+            currTime.years = currTime.years + 1
+            currTime.months = currTime.months - 12
+
+        return currTime
+    
+    def formatClockTime(currTime):
+        monthStr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+        seconds = str(currTime.seconds)
+        if currTime.seconds < 10:
+            seconds = seconds + "0"
+
+        minutes = str(currTime.minutes)
+        if currTime.minutes < 10:
+            minutes = minutes + "0"
+
+        hours = str(currTime.hours)
+
+        days = str(currTime.days)
+
+        month = monthStr[currTime.months]
+
+        years = str(currTime.years)
+
+        formattedTime = hours + ":" + minutes + ":" + seconds + " " + month + ", " + years
+        return formattedTime

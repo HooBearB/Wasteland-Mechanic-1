@@ -30,18 +30,20 @@
 #Project end: 
 #Version number: v1.0.0
 
-#A copy of MOOSE Recoded can be found in MOOSERecoded.py
+# A copy of MOOSE Recoded can be found in MOOSERecoded.py
 import MOOSERecoded as moose
-#All animations are found in GUIAnimations.py
+# All animations are found in GUIAnimations.py
 import GUIAnimations as animations
-#Map generation and calling is stored in MapHandler.py
+# Map generation and calling is stored in MapHandler.py
 import MapHandler as maps
-#Vehicle menus and handling can be found in VehicleHandler.py
+# Vehicle menus and handling can be found in VehicleHandler.py
 import VehicleHandler as vehicle
-#Inventory handling and management is stored in InventoryHandler.py
+# Inventory handling and management is stored in InventoryHandler.py
 import InventoryHandler as inv
-#Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
+# Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
 import JSONHandler as jason
+
+# Other necessary modules are imported as well
 import random
 import json
 import os
@@ -55,10 +57,10 @@ def init():
 	global scenarios
 
 	time.sleep(1)
-  	#Displays the logo of the MOOSE engine
+  	# Displays the logo of the MOOSE engine
 	moose.displayLogo()
 	time.sleep(1)
-	#Opens loading loop that pulls and reads JSON files, as well as printing the loading screen animation
+	# Opens loading loop that pulls and reads JSON files, as well as printing the loading screen animation
 	x = 0
 	files = [r'items', r'vehicles', r'media', r'locations', r'scenarios']
 	fileData = []
@@ -98,6 +100,7 @@ def startGame():
 
 	scenarioDisp = []
 	scenarioList = scenarios["usable"]
+	# Opens and creates a list of scenarios found in the associated JSON file
 	x = 0
 	while x < len(scenarioList):
 		scenarioDisp.append(scenarios[scenarioList[x]]["name"])
@@ -216,7 +219,7 @@ def gameLoop():
 		displayMap = maps.revealGen(map, position, maps.director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
 		displayMap = maps.formatMap(map, position, locations)
 		moose.scrollingText(displayMap[position:position + 20])
-		decision = moose.askOption(moose.timeKeeper.formatClockTime(gameTime), ["Start driving", "Open vehicle menu"])
+		decision = moose.askOption(moose.timekeeping.formatClockTime(gameTime), ["Start driving", "Open vehicle menu"])
 		if decision == 1:
 			print()
 			maps.drive(vehicle.determineMaxSpeed(items[currentCar["engine"]]["hp"], currentCar["weight"]), character, locations, position, gameData)

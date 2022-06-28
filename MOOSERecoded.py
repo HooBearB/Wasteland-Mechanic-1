@@ -14,8 +14,9 @@
 #Maintained and added to by: (Insert the name of the guy I'm gonna bribe into looking at my shitty code)
 
 import time
+import os
+import json
 
-#Provides ANSI colour and format information
 class format:
     mode = "Colour"
     clear = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
@@ -93,6 +94,7 @@ def scrollingText(message, indent = 2, increment = 1, delay = 0.02):
         time.sleep(delay)
         run = run + increment
     print("")
+
 
 #Asks for user input given a list of options
 #   message: What to print out in the beginning (String)
@@ -215,7 +217,7 @@ def listOption(message, options, indent = 2, delay = 0, lookingFor = -1):
 #   min: Lower limit of range, must be less than max, if given (Integer, default "N/A" to prevent usage) 
 #   max: Upper limit of range, must be greater than min, if given (Integer, default "N/A" to prevent usage)
 #   indent: How far from the edge of the terminal to start printing objects (Positive integer, default 2)
-def askOpen(message, min = -99999999999999999, max = 99999999999999999, indent = 2):
+def askOpen(message, min = "N/A", max = "N/A", indent = 2):
     run = 0
     while run < indent:
         print(" ", end = "")
@@ -347,53 +349,200 @@ def askToContinue():
     #Asks to continue, x is an unused variable
     x = input("  Press " + format.bold + "enter" + format.end + " to continue.   ")
 
-class timeKeeper:
-    def updateTime(currTime, addSeconds = 0, addMinutes = 0, addHours = 0, addDays = 0, addMonths = 0, addYears = 0):
-        currTime.seconds = currTime.seconds + addSeconds
-        currTime.minutes = currTime.minutes + addMinutes
-        currTime.hours = currTime.hours + addHours
-        currTime.days = currTime.days + addDays
-        currTime.months = currTime.months + addMonths
-        currTime.years = currTime.years + addYears
+class jason:
+    #Opens a file and dumps the JSON data into a dictionary object
+    #   file: Path from the current file's directory (String, path-like)
+    def openFile(file):
+        #Finds root directory of running file
+        directory = os.path.dirname(__file__)
+        #Gets file path to file in /json/ folder that is found in root directory
+        filename = os.path.join(directory, (r'json/' + file + r'.json'))
+        #Attempts to find file in /json/ folder found in root directory
+        try:
+            items = json.load(open(filename, "r"))
+        #Print error message if failure is inevitably encountered
+        except:
+            print(format.red + format.bold + "Error: Could not find json file at " + filename + " using JSONHandler.py" + format.end)
+            items = "None"
+        #Returns JSON content within file
+        return items
 
-        daysToMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    #Saves data to a given folder under a set file name
+    #   name: What to save the file under (String)
+    #   folder: Where to save the file (String)
+    #   data: What to write in the file (Any type of data that can be stored in a JSON file)
+    def saveFile(name, folder, data):
+        #Finds root directory of running file
+        directory = os.path.dirname(__file__)
+        #Gets file path to file in /json/ folder that is found in root directory
+        filename = os.path.join(directory, (folder + r'/' + name + r'.json'))
+        #Opens file
+        file = open(filename, "w")
+        #Dumps data into file
+        json.dump(data, file, separators = (',', ': '), indent = 4)
 
-        while currTime.seconds >= 60:
-            currTime.minutes = currTime.minutes + 1
-            currTime.seconds = currTime.seconds - 60
-        while currTime.minutes >= 60:
-            currTime.hours = currTime.hours + 1
-            currTime.minutes = currTime.minutes - 60
-        while currTime.hours >= 24:
-            currTime.days = currTime.days + 1
-            currTime.hours = currTime.hours - 24
-        while currTime.days >= daysToMonth[currTime.months]:
-            currTime.months = currTime.months + 1
-            currTime.day = currTime.day - daysToMonth[currTime.months]
-        while currTime.months > 12:
-            currTime.years = currTime.years + 1
-            currTime.months = currTime.months - 12
+    #Tries to grab a value from a given dictionary
+    #   root: The root object to pull from (Dictionary)
+    #   find: What you want to attempt to pull from the root (String)
+    #   setTo: What to set the value to if there is no given value in the root (Any)
+    def tryGrab(root, find, setTo):
+        try:
+            x = root[find]
+        except:
+            x = setTo
+        return x
 
-        return currTime
+class timekeeping:
+    #Defines a time object. Values default to January 1st, 2000
+    #   iseconds: Initial amount of seconds (Float or integer)
+    #   iminutes: Initial amount of minutes (Integer)
+    #   ihours: Initial amount of hours (Integer)
+    #   idays: Initial amount of days (Integer)
+    #   imonths: Initial amount of months (Integer)
+    #   iyears: Initial amount of years (Integer)
+    def configureTime(iseconds = 0, iminutes = 0, ihours = 0, idays = 1, imonths = 1, iyears = 2000):
+        #Defines return class and needed variables
+        class time:
+            seconds = iseconds
+            minutes = iminutes
+            hours = ihours
+            days = idays
+            months = imonths
+            years = iyears
+
+            #Allows you to add additional time to the object.
+            #   addSeconds: How many seconds you wish to move forward (Float or integer)
+            #   addMinutes: How many minutes you wish to move forward (Integer)
+            #   addHours: How many hours you wish to move forward (Integer)
+            #   addDays: How many days you wish to move forward (Integer)
+            #   addMonths: How many months you wish to move forward (Integer)
+            #   addYears: How many years you wish to move forward (Integer)
+            def updateTime(addSeconds = 0, addMinutes = 0, addHours = 0, addDays = 0, addMonths = 0, addYears = 0):
+                time.seconds = time.seconds + addSeconds
+                time.minutes = time.minutes + addMinutes
+                time.hours = time.hours + addHours
+                time.days = time.days + addDays
+                time.months = time.months + addMonths
+                time.years = time.years + addYears
+
+                daysToMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+                while time.seconds >= 60:
+                    time.minutes = time.minutes + 1
+                    time.seconds = time.seconds - 60
+                while time.minutes >= 60:
+                    time.hours = time.hours + 1
+                    time.minutes = time.minutes - 60
+                while time.hours >= 24:
+                    time.days = time.days + 1
+                    time.hours = time.hours - 24
+                while time.days > daysToMonth[time.months]:
+                    if time.months == 2 and time.years % 4 == 0 and time.days > 29:
+                        time.day = time.day - 29
+                    else:
+                        time.day = time.day - daysToMonth[time.months]
+                    time.months = time.months + 1
+                while time.months > 12:
+                    time.years = time.years + 1
+                    time.months = time.months - 12
+
+            def formatClockTime(militaryClock = False):
+                monthStr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+                seconds = str(time.seconds)
+                if time.seconds < 10:
+                    seconds = seconds + "0"
+
+                minutes = str(time.minutes)
+                if time.minutes < 10:
+                    minutes = minutes + "0"
+
+                if militaryClock:
+                    if time.hours <= 12:
+                        hours = str(time.hours)
+                        period = "AM"
+                    else:
+                        hours = str(time.hours - 12)
+                        period = "PM"
+
+                days = str(time.days)
+
+                month = monthStr[time.months]
+
+                years = str(time.years)
+
+                if militaryClock:
+                    formattedTime = hours + ":" + minutes + ":" + seconds + " " + month + " " + days + ", " + years
+                else:
+                    formattedTime = hours + ":" + minutes + ":" + seconds + " " + period + " " + month + " " + days + ", " + years
+                return formattedTime
+
+        return time
     
-    def formatClockTime(currTime):
-        monthStr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
 
-        seconds = str(currTime.seconds)
-        if currTime.seconds < 10:
-            seconds = seconds + "0"
+class mapping:
+    def defineMobility(startX, startY):
+        class mover:
+            currX = startX
+            currY = startY
 
-        minutes = str(currTime.minutes)
-        if currTime.minutes < 10:
-            minutes = minutes + "0"
+            def changePosition(x, y):
+                mover.currX = mover.currX + x
+                mover.currY = mover.currY + y
+                
+        return mover
 
-        hours = str(currTime.hours)
+    def genMap(xDimension, yDimension):
+        template = []
+        x = 0
+        while x < xDimension:
+            y = 0
+            temp = []
+            while y < yDimension:
+                temp.append(None)
+                y = y + 1
+            template.append(temp)
+            x = x + 1
+        class returnMap:
+            map = template
 
-        days = str(currTime.days)
+            def readTile(x, y):
+                return returnMap.map[y][x]
+            def replaceTile(x, y, data):
+                returnMap.map[y][x] = data
 
-        month = monthStr[currTime.months]
+        return returnMap
 
-        years = str(currTime.years)
+    def defineRoom(roomName, roomDisplay, roomInteract = [], roomNPCs = [], roomExits = []):
+        class room:
+            name = roomName
+            display = roomDisplay
+            interactables = roomInteract
+            npcs = roomNPCs
+            exits = roomExits
 
-        formattedTime = hours + ":" + minutes + ":" + seconds + " " + month + ", " + years
-        return formattedTime
+            def changeName(data):
+                room.name = data
+            def changeDisplay(data):
+                room.display = data
+            def addInteraction(data):
+                room.interactables.append(data)
+            def addNPC(data):
+                room.npcs.append(data)
+            def addExit(data):
+                room.exits.append(data)
+        return room
+
+    def printMap(map):
+        yRun = 0
+        while yRun < len(map):
+            xRun = 0
+            while xRun < len(map[yRun]):
+                if map[yRun][xRun] != None:
+                    print(map[yRun][xRun].display, end = "")
+                else:
+                    print(" ", end = "")
+                xRun = xRun + 1
+            print()
+            yRun = yRun + 1

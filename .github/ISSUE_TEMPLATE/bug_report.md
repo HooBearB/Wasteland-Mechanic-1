@@ -2,7 +2,7 @@
 name: Bug report
 about: Report a bug for WM
 title: "[BUG] Input title"
-labels: 'Bug'
+labels: Bug
 assignees: HooBearB
 
 ---
@@ -11,7 +11,7 @@ assignees: HooBearB
 You can give me a really quick description of what might be wrong
 
 **To reproduce:**
-If you can, give exact steps of how to reach this error again. Some bugs bay be entirely situational, however.
+If you can, give exact steps of how to reach this error again. Some bugs may be entirely situational, however.
 
 **Expected behavior:**
 Write a quick description of what you thought would happen.
@@ -26,7 +26,7 @@ If you can, add screenshots that show your problem.
 
 **Non-traditional computer (if you use one):**
  - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
+ - OS: [e.g. iOS 15.5]
  - Interpreter [e.g. Pyto]
  - Version [e.g. 22]
 

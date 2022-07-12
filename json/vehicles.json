@@ -1,4 +1,8 @@
 {
+    "origin": "Vanilla WM1 JSON",
+    "description": "Default content for WM1.",
+    "author": "Flint",
+
     "list": ["cav_alm1", "cav_alm2", "cav_trac1", "cav_trac2", "cav_trac3", 
              "cav_omeg", "cav_cap1", "cav_cap2", "cav_cap3", "cav_sat1", "cav_sat2", 
              "cav_gem", "cav_ms1", "cav_ms2", "cav_ms3", "cav_ms4", "cav_ms5", "cav_ms6",

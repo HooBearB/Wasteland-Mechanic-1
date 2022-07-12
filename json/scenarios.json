@@ -1,4 +1,8 @@
 {
+    "origin": "Vanilla WM1 JSON",
+    "description": "Default content for WM1.",
+    "author": "Flint",
+
     "usable": ["postapoc", "2007", "ut", "ag", "chal:alr", "chal:fam", "chal:dgw"],
 
     "postapoc": {

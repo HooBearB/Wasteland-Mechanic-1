@@ -34,14 +34,8 @@
 import MOOSERecoded as moose
 # All animations are found in GUIAnimations.py
 import GUIAnimations as animations
-# Map generation and calling is stored in MapHandler.py
-import MapHandler as maps
 # Vehicle menus and handling can be found in VehicleHandler.py
 import VehicleHandler as vehicle
-# Inventory handling and management is stored in InventoryHandler.py
-import InventoryHandler as inv
-# Functions for loading, saving, and handling JSON files can be found in JSONHandler.py
-import JSONHandler as jason
 
 # Other necessary modules are imported as well
 import random
@@ -66,7 +60,7 @@ def init():
 	fileData = []
 	while x < len(files):
 		print(moose.format.clear)
-		fileData.append(jason.openFile(files[x]))
+		fileData.append(moose.jason.openFile(files[x]))
 		animations.loading(x * 2, top = "Loading game...")
 		time.sleep(0.2)
 		x = x + 1
@@ -210,28 +204,6 @@ def startGame():
 		gameLoop()
 
 def gameLoop():
-	global map
-	
-	position = 0
-	map = maps.startGen(gameData.end)
-	while position < gameData.end:
-		print(moose.format.clear)
-		displayMap = maps.revealGen(map, position, maps.director(gameData.director, inv.determineNeeds(character.hunger, character.thirst, character.health), 5, locations["list"], locations))
-		displayMap = maps.formatMap(map, position, locations)
-		moose.scrollingText(displayMap[position:position + 20])
-		decision = moose.askOption(moose.timekeeping.formatClockTime(gameTime), ["Start driving", "Open vehicle menu"])
-		if decision == 1:
-			print()
-			maps.drive(vehicle.determineMaxSpeed(items[currentCar["engine"]]["hp"], currentCar["weight"]), character, locations, position, gameData)
-		if decision == 2:
-			print(moose.format.clear)
-			vehicle.displayGraphics(currentCar)
-			decision = moose.askOption("", ["Modify vehicle", "Exit vehicle menu"])
-			if decision == 1:
-				print(moose.format.clear)
-				vehicle.displayVehicle(currentCar, items)
-				vehicle.modifyVehicle(currentCar, character.inventory, items)
-
-
+	action = moose.askOption("")
 
 init()

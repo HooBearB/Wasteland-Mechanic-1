@@ -1,4 +1,8 @@
 {
+    "origin": "Vanilla WM1 JSON",
+    "description": "Default content for WM1.",
+    "author": "Flint",
+
     "list": ["gas", "church", "grocery", "boxstore", "house", "apartment", "garage", "restaurant", "cafe", "junkyard", "bar", "weaponsstore"],
 
     "unmapped": {
